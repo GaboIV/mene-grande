@@ -1,0 +1,45 @@
+# Archivos de Git
+.git
+.gitignore
+
+# Archivos de Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Archivos de desarrollo
+.vscode
+*.log
+*.tmp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos temporales
+temp/
+tmp/
+
+# Archivos de documentación
+README*.md
+*.txt
+
+# Archivos de configuración local
+.env
+.env.local
+
+# Archivos de IDE
+.idea/
+*.swp
+*.swo
+
+# Archivos de node_modules (si existieran)
+node_modules/
+
+# Archivos de composer (si existieran)
+vendor/
+composer.lock 

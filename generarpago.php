@@ -36,7 +36,7 @@
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
     session_start();
 
-	include("conexion.php");
+	include("conexion_local.php");
 	
 	$atributo = $_GET["attr"];
 	$id_depositante = $_POST["name_id_txt"];

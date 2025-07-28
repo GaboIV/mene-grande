@@ -36,7 +36,7 @@
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
     session_start();
 
-	include("conexion.php");
+	include("conexion_local.php");
 	
 	$id = $_POST["id_pago_txt"];
 	$propietario = $_POST["id_prop_txt"];

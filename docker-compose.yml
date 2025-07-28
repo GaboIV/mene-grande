@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Servicio de base de datos MySQL
+  db:
+    image: mysql:5.7
+    container_name: menegrande_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: menegrande
+      MYSQL_USER: menegrande_user
+      MYSQL_PASSWORD: menegrande_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./menegrande_12_07.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - menegrande_network
+
+  # Servicio de aplicación PHP
+  web:
+    build: .
+    container_name: menegrande_web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./uploads:/var/www/html/uploads
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=menegrande
+      - DB_USER=menegrande_user
+      - DB_PASS=menegrande_pass
+    networks:
+      - menegrande_network
+
+  # Servicio de phpMyAdmin (opcional, para administrar la base de datos)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: menegrande_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: menegrande_user
+      PMA_PASSWORD: menegrande_pass
+    depends_on:
+      - db
+    networks:
+      - menegrande_network
+
+volumes:
+  mysql_data:
+
+networks:
+  menegrande_network:
+    driver: bridge 

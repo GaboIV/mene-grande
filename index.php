@@ -3,7 +3,7 @@
 <?php 
 
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-	include("conexion.php");
+	include("conexion_local.php");
 
 	$dia_num = date(d);
     

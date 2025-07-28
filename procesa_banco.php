@@ -1,7 +1,7 @@
 <?php 
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
     
-	require_once("conexion.php");
+	require_once("conexion_local.php");
 
 
 	$banco = $_POST['banco_txt'];

@@ -1,5 +1,5 @@
 <?php 
-require_once("conexion.php");
+require_once("conexion_local.php");
 
 	$id_inmueble = $_POST['inmueble_txt'];
 	echo "$id_inmueble<br>";
@@ -24,4 +24,5 @@ require_once("conexion.php");
 	parent.document.getElementById('menu').src='contactos.php?sesion=<?php echo $id_inmueble ?>';
 
 </script>
+
 

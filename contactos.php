@@ -13,7 +13,7 @@
 
 <?php 
 
-    include("conexion.php");    
+    include("conexion_local.php");    
 
     $id_sesion = $_GET["sesion"];
 

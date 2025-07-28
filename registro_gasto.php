@@ -55,7 +55,7 @@
 
 <?php 
 
-	include("conexion.php");
+	include("conexion_local.php");
 
     $sql = "SELECT * FROM proveedor ORDER BY nombre";
     $ejecutar_sql = $conexion->query($sql);
@@ -151,3 +151,4 @@
         });
     });
 </script>
+

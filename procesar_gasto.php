@@ -1,5 +1,5 @@
 <?php 
-require_once("conexion.php");
+require_once("conexion_local.php");
 
 	$factura = $_POST['factura_txt'];	
 	$fecha = $_POST['fecha_dtp'];	
@@ -43,4 +43,5 @@ require_once("conexion.php");
 			}
 		}
 ?>
+
 

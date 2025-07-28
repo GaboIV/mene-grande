@@ -1,5 +1,6 @@
 <?php
-	include("conexion_siscon.php");
+	session_start();
+	include("conexion_final.php");
 
 	$us1992_xTT = $_POST["mom_la12"];   
 	$pw_1889_fYr = $_POST["lel_la12"];
@@ -10,17 +11,21 @@
 
 		$consulta="SELECT * FROM inmueble WHERE inmueble = '$us1992_xTT' AND id_estatus = 1";
 		$ejecutar_consulta = $conexion->query($consulta);
+		
+		if ($ejecutar_consulta === false) {
+			die("Error en la consulta: " . $conexion->error);
+		}
+		
 		$num_regs = $ejecutar_consulta->num_rows; 
 
 		if ($num_regs == 0) {		
-			/*header("Location: index.php?error=bloqueado");	*/
+			header("Location: index.php?error=bloqueado");
 		} else {
 			if($registro = $ejecutar_consulta->fetch_assoc()) {
 				if($registro["clave"] == $pw_1889_fYr) {
-		  			session_start();
 		  			
 		  			$_SESSION['usuario'] = $registro["propietario"];
-		  			$_SESSION['id_inmueble'] = $registro["id_inmueble"];	
+		  			$_SESSION['id_inmueble'] = $registro["id_inmueble"];
 
 		  			if (!$_SESSION['dinamica']) {
 		  				$_SESSION['dinamica'] = substr(md5(rand()),0,7);

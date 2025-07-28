@@ -1,5 +1,5 @@
 <?php 
-require_once("conexion.php");
+require_once("conexion_local.php");
 
 	$inmueble = $_POST['inmueble_txt'];
 	echo "$inmueble<br>";
@@ -84,4 +84,5 @@ require_once("conexion.php");
 
 
 ?>
+
 

@@ -1,5 +1,5 @@
 <?php
-	include("conexion_siscon.php");
+	include("conexion_local.php");
 
 	$us1992_xTT = $_POST["mom_la12"];   
 	$pw_1889_fYr = $_POST["lel_la12"];

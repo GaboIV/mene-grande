@@ -3,14 +3,27 @@
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
     session_start();
 
-    include("conexion.php");
+    include("conexion_final.php");
     include("switch.php"); 
 
+        if (!isset($_SESSION['id_inmueble']) || empty($_SESSION['id_inmueble'])) {
+            die("Error: No se ha establecido el id_inmueble en la sesión. Por favor, inicie sesión nuevamente.");
+        }
+        
         $id_sesion = $_SESSION['id_inmueble'];
 
         $consulta = "SELECT * FROM inmueble WHERE id_inmueble=$id_sesion";
         $ejecutar_consulta = $conexion->query($consulta);
+        
+        if ($ejecutar_consulta === false) {
+            die("Error en la consulta: " . $conexion->error);
+        }
+        
         $registro_inm = $ejecutar_consulta->fetch_assoc();
+        
+        if (!$registro_inm) {
+            die("No se encontraron datos para el id_inmueble: $id_sesion");
+        }
 
         $casa = $registro_inm["inmueble"];
 
@@ -19,13 +32,26 @@
 
         $consulta = "SELECT * FROM renta ORDER BY id_renta DESC LIMIT 1";
         $ejecutar_consulta = $conexion->query($consulta);
-        $registro_inm = $ejecutar_consulta->fetch_assoc(); 
+        
+        if ($ejecutar_consulta === false) {
+            die("Error en la consulta de renta: " . $conexion->error);
+        }
+        
+        $registro_inm = $ejecutar_consulta->fetch_assoc();
+        
+        if (!$registro_inm) {
+            // Si no hay datos de renta, usar valores por defecto
+            $monto_cond = "0,00";
+            $mes_ac = date("n");
+            $ano_ac = date("Y");
+        } else { 
 
         $monto_cond = number_format(abs($registro_inm["monto"]), 2, ',', '.');
 
         $mes_ac = $registro_inm["mes"];
 
         $ano_ac = $registro_inm["ano"];
+        }
         
         $mes_en = date("F", mktime(0,0,0,$mes_ac,1,$ano_ac));               
 
@@ -357,3 +383,4 @@
         <script src="js/whmcs.js"></script>
     </body>
 </html>
+
