@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <?php 
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-    session_start();
-
     include("conexion_final.php");
+    include("auth_helper.php");
     include("switch.php"); 
 
-        if (!isset($_SESSION['id_inmueble']) || empty($_SESSION['id_inmueble'])) {
-            die("Error: No se ha establecido el id_inmueble en la sesión. Por favor, inicie sesión nuevamente.");
-        }
-        
-        $id_sesion = $_SESSION['id_inmueble'];
+    // Verificar autenticación
+    if (!AuthHelper::isAuthenticated()) {
+        header("Location: index.php?error=noauth");
+        exit;
+    }
 
-        $consulta = "SELECT * FROM inmueble WHERE id_inmueble=$id_sesion";
-        $ejecutar_consulta = $conexion->query($consulta);
-        
-        if ($ejecutar_consulta === false) {
-            die("Error en la consulta: " . $conexion->error);
-        }
-        
-        $registro_inm = $ejecutar_consulta->fetch_assoc();
-        
-        if (!$registro_inm) {
-            die("No se encontraron datos para el id_inmueble: $id_sesion");
-        }
+    $id_sesion = AuthHelper::getCurrentInmuebleId();
+    $usuario_actual = AuthHelper::getCurrentUser();
 
-        $casa = $registro_inm["inmueble"];
+    $consulta = "SELECT * FROM inmueble WHERE id_inmueble=$id_sesion";
+    $ejecutar_consulta = $conexion->query($consulta);
+    
+    if ($ejecutar_consulta === false) {
+        die("Error en la consulta: " . $conexion->error);
+    }
+    
+    $registro_inm = $ejecutar_consulta->fetch_assoc();
+    
+    if (!$registro_inm) {
+        die("No se encontraron datos para el id_inmueble: $id_sesion");
+    }
 
-        $nombre_completo  = $_SESSION["usuario"];
-        $name = explode(" ", $nombre_completo);
+    $casa = $registro_inm["inmueble"];
 
-        $consulta = "SELECT * FROM renta ORDER BY id_renta DESC LIMIT 1";
-        $ejecutar_consulta = $conexion->query($consulta);
-        
-        if ($ejecutar_consulta === false) {
-            die("Error en la consulta de renta: " . $conexion->error);
-        }
-        
-        $registro_inm = $ejecutar_consulta->fetch_assoc();
-        
-        if (!$registro_inm) {
-            // Si no hay datos de renta, usar valores por defecto
-            $monto_cond = "0,00";
-            $mes_ac = date("n");
-            $ano_ac = date("Y");
-        } else { 
+    $nombre_completo = $usuario_actual;
+    $name = explode(" ", $nombre_completo);
 
-        $monto_cond = number_format(abs($registro_inm["monto"]), 2, ',', '.');
+    $consulta = "SELECT * FROM renta ORDER BY id_renta DESC LIMIT 1";
+    $ejecutar_consulta = $conexion->query($consulta);
+    
+    if ($ejecutar_consulta === false) {
+        die("Error en la consulta de renta: " . $conexion->error);
+    }
+    
+    $registro_inm = $ejecutar_consulta->fetch_assoc(); 
+    
+    if (!$registro_inm) {
+        // Si no hay datos de renta, usar valores por defecto
+        $monto_cond = "0,00";
+        $mes_ac = date("n");
+        $ano_ac = date("Y");
+    } else { 
 
-        $mes_ac = $registro_inm["mes"];
+    $monto_cond = number_format(abs($registro_inm["monto"]), 2, ',', '.');
 
-        $ano_ac = $registro_inm["ano"];
-        }
-        
-        $mes_en = date("F", mktime(0,0,0,$mes_ac,1,$ano_ac));               
+    $mes_ac = $registro_inm["mes"];
 
-        /*if ($dia_en=="Monday") $dia_es="Lunes";
-        if ($dia_en=="Tuesday") $dia_es="Martes";
-        if ($dia_en=="Wednesday") $dia_es="Miércoles";
-        if ($dia_en=="Thursday") $dia_es="Jueves";
-        if ($dia_en=="Friday") $dia_es="Viernes";
-        if ($dia_en=="Saturday") $dia_es="Sabado";
-        if ($dia_en=="Sunday") $dia_es="Domingo";*/        
+    $ano_ac = $registro_inm["ano"];
+    }
+    
+    $mes_en = date("F", mktime(0,0,0,$mes_ac,1,$ano_ac));               
 
-        if ($mes_en=="January") $mes_es="Enero";
-        if ($mes_en=="February") $mes_es="Febrero";
-        if ($mes_en=="March") $mes_es="Marzo";
-        if ($mes_en=="April") $mes_es="Abril";
-        if ($mes_en=="May") $mes_es="Mayo";
-        if ($mes_en=="June") $mes_es="Junio";
-        if ($mes_en=="July") $mes_es="Julio";
-        if ($mes_en=="August") $mes_es="Agosto";
-        if ($mes_en=="September") $mes_es="Setiembre";
-        if ($mes_en=="October") $mes_es="Octubre";
-        if ($mes_en=="November") $mes_es="Noviembre";
-        if ($mes_en=="December") $mes_es="Diciembre";
+    /*if ($dia_en=="Monday") $dia_es="Lunes";
+    if ($dia_en=="Tuesday") $dia_es="Martes";
+    if ($dia_en=="Wednesday") $dia_es="Miércoles";
+    if ($dia_en=="Thursday") $dia_es="Jueves";
+    if ($dia_en=="Friday") $dia_es="Viernes";
+    if ($dia_en=="Saturday") $dia_es="Sabado";
+    if ($dia_en=="Sunday") $dia_es="Domingo";*/        
+
+    if ($mes_en=="January") $mes_es="Enero";
+    if ($mes_en=="February") $mes_es="Febrero";
+    if ($mes_en=="March") $mes_es="Marzo";
+    if ($mes_en=="April") $mes_es="Abril";
+    if ($mes_en=="May") $mes_es="Mayo";
+    if ($mes_en=="June") $mes_es="Junio";
+    if ($mes_en=="July") $mes_es="Julio";
+    if ($mes_en=="August") $mes_es="Agosto";
+    if ($mes_en=="September") $mes_es="Setiembre";
+    if ($mes_en=="October") $mes_es="Octubre";
+    if ($mes_en=="November") $mes_es="Noviembre";
+    if ($mes_en=="December") $mes_es="Diciembre";
 ?>
 
 <style type="text/css">

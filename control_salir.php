@@ -1,5 +1,10 @@
 <?php
-	session_start();	
-	session_destroy();	
-	header("Location: index.php?error=00");
+include("auth_helper.php");
+
+// Cerrar sesión
+AuthHelper::logout();
+
+// Redirigir al login
+header("Location: index.php");
+exit;
 ?>

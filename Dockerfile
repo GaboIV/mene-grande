@@ -20,11 +20,20 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 # Habilitar mod_rewrite para Apache
 RUN a2enmod rewrite
 
+# Configurar PHP para Apache
+RUN echo 'AddType application/x-httpd-php .php' > /etc/apache2/mods-enabled/php7.conf
+
+# Crear directorio para sesiones y dar permisos
+RUN mkdir -p /tmp/sessions && chmod 777 /tmp/sessions
+
 # Configurar el directorio de trabajo
 WORKDIR /var/www/html
 
 # Copiar archivos del proyecto
 COPY . /var/www/html/
+
+# Copiar configuración PHP personalizada
+COPY php.ini /usr/local/etc/php/conf.d/custom.ini
 
 # Configurar permisos
 RUN chown -R www-data:www-data /var/www/html \
