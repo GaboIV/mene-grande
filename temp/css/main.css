@@ -1,0 +1,191 @@
+body {
+	background: #F5F5F5;
+	background-color: #F5F5F5;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+	border:3px solid #EEEEEE;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+	border:3px solid #2FBCF2;
+}
+
+
+
+section#header {
+    background: #f5f5f5;
+    border-radius: 0;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+section#main-menu {
+    background-color: #F5F5F5;
+    margin-bottom: 10px;
+
+}
+
+#main-menu .container {
+	padding: 0px;
+}
+
+section#main-body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#main-body > .row {
+    background-color: #FFF;
+    border-top: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    padding: 20px 2px 10px 2px;
+    box-sizing: border-box;
+    min-height: 700px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-default {
+    background-image: -webkit-linear-gradient(top, #fff 0, #fcfcfc 100%);
+    background-image: -o-linear-gradient(top, #fff 0, #fcfcfc 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), to(#fcfcfc));
+    background-image: linear-gradient(to bottom, #fff 0, #fcfcfc 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fffcfcfc', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 5px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 5px rgba(0,0,0,0.075);
+}
+
+.nav li:hover {
+	background-color: #0170C0;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #FFF;
+}
+
+.line-primary {
+	border: 2px solid #004faa;
+}
+
+.line-success {
+	border: 2px solid #cbe05c;
+}
+
+.line-info {
+	border: 2px solid #55c8f4;
+}
+
+.line-warning {
+	border: 2px solid #f3c146;
+}
+
+.line-danger {
+	border: 2px solid #dd4b39;
+}
+
+.header-lined {
+    background: url("../img/bgCover.jpg") repeat #000D18;
+    background-size: cover;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+div.header-lined h1 {
+	background: rgba(0,0,0,0.15);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    border-bottom: none;
+    font-weight: 400;
+    color: #fff;
+}
+
+div.header-lined small {
+    color: #ccc;
+}
+
+.telefonos {
+	background-color: #ED6636;
+	color: #FFFFFF;
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+	display: block;
+	font-size: 16px;
+	font-family: Tahoma;
+	padding: 10px;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.footer {
+	background-color: #111;
+	color: #999;
+	margin: 0 auto;
+	display: block;
+	min-height: 50px;
+	margin-top: 0px;
+	padding: 20px;
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+}
+
+.footer ul, .footer ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer h5 {
+	background-color: #000;
+	color: #CCC;
+	padding: 10px;
+	border:1px solid #333;
+	border-radius: 5px;
+}
+
+.footer a {
+	color: #999;
+	display: block;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+	h1 {
+		font-size: 20px;
+		
+	}
+
+	.footer {
+		text-align: center;
+	}
+
+	.telefonos {
+		width: 100%;
+		font-weight: normal;
+		border-radius: 0;
+	}
+
+}
+
+@media (min-width: 1600px) {
+
+	.telefonos {
+		width: 62%;
+	}
+
+}

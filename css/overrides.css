@@ -1,0 +1,92 @@
+/**
+ * WHMCS Bootstrap Override Sheet
+ *
+ * These styles override Bootstrap's defaults.
+ *
+ * @project   WHMCS
+ * @cssdoc    version 1.0-pre
+ * @package   WHMCS
+ * @author    WHMCS Limited <development@whmcs.com>
+ * @copyright Copyright (c) WHMCS Limited 2005-2015
+ * @license   http://www.whmcs.com/license/
+ * @link      http://www.whmcs.com/
+*/
+
+/*@import url("//fonts.googleapis.com/css?family=Magra:400,600|Raleway:400,700");*/
+
+body,
+input,
+button,
+select,
+textarea {
+  /*font-family: "Magra", Verdana, Tahoma, serif;*/
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    
+    font-weight: 700;
+}
+
+.panel {
+  font-size: 0.9em;
+}
+
+.list-group {
+  font-size: 0.9em;
+}
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
+    background-color: #006687;
+}
+
+.pagination {
+    font-size: 0.8em;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    color: white;
+    background-color: #006687;
+    border-color: #006687;
+}
+
+.navbar-main .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #0170C0;
+}
+
+.label {
+    border-radius: 0;
+}
+
+input[type='file'].form-control {
+    height: inherit;
+    margin-bottom: 5px;
+}
+
+.list-group-item {
+    padding: 7px 15px;
+}
+.panel-body {
+    padding: 10px 15px;
+}
+
+/*
+ * We use a larger font-size than the bootstrap default, which requires an increase
+ * in the top offset to maintain correct alignment in form control feedback.
+ */
+.has-feedback label ~ .form-control-feedback {
+    top: 27px !important;
+}
+
+.list-group-item > i.fa.fa-circle-o {
+    color: #808080;
+}

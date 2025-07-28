@@ -1,0 +1,297 @@
+/*
+Estilos Ministerio de Educación, Cultura y Deporte
+Ministerio de Educación, Cultura y Deporte
+Copyright 2012
+Todos los derechos reservados.
+*/
+
+body {margin: 0; padding: 0; background:#fff; font-family: arial, helvetica, sans-serif; color: #000}
+img {border: 0;}
+.clear {clear: both;}
+
+/* Estilos para la cabecera superior */
+#fondo {background: #FFF; margin: 0 auto}
+#fondo #head {width: auto; margin: 0 auto; padding: 0; }
+	#fondo #head #escudo {margin: 0;}
+	#fondo #head #escudo img {width:265px; height:60px;}
+#fondo #head .fecha {position: absolute; left: 24.5em; top: 3.6em; margin: 0; font-size: 0.7em}
+
+/* Menu superior idiomas */
+#fondo #head #menusup {display: none }
+	
+/* Menu superior enlaces */
+#fondo #head #opciones {clear: both;}
+
+/* Redes sociales */
+#fondo #head #opciones #redes-sociales {display: none }
+
+/* Traductor */
+ #fondo #head #opciones #traductor {display: none}
+
+/* Pestanias */
+#fondo #head #opciones #pestanias {display: none}
+
+#fondo #head #opciones #buscador {display: none}
+
+/* Bloque arriba */
+#fondo #head #opciones #bloquearriba {clear: both; width: auto; margin:0.5em auto 0em auto; padding-top: 0.7em; background: #fff}
+#fondo #head #opciones #bloquearriba #izquierda {width: auto; margin: 0; border: 0px solid #ccc; background: #fff /*url("../img/fondo-izquierda.png") bottom repeat-x*/}
+
+#container {width:734px; height: 352px;	padding:0px; margin:0 auto; position: relative;}
+#slides {background: #F0F0F0;}
+/*	Slides container Important: Set the width of your slides container Set to display none, prevents content flash*/
+.slides_container {width:734px; height: 352px; overflow:auto; overflow-x: hidden; position: relative; background: #363636; }
+
+/*	Each slide Important: Set the width of your slides. If height not specified height will be set by the slide content. Set to display block*/
+.slides_container div.slide {width:734px; height:352px; display: inline-block/*display: block; height:352px; position: absolute; top: 0*/}
+.slides_container div.slide img {width:734px; height:352px; display: inline-block;}
+
+/*	Next/prev buttons*/
+#slides .next,#slides .prev {display: none;}
+#slides .next {left:696px;}
+#slides .next:hover,#slides .prev:hover {opacity: 0.9}
+
+/* Pagination*/
+.pagination {margin:0; width:260px; position: absolute; bottom: 1.5em; left: 0em; z-index:502;}
+*+html .pagination {margin:0; width:260px; position: absolute; bottom: 1.5em; left: 2.5em; z-index:502;}
+.pagination li {float:left;	margin:0 1px; list-style:none;}
+.pagination li a {display:block; width:12px; height:0; padding-top:12px; background-image:url("../img/pagination.png"); background-position:0 0; float:left; overflow:hidden;}
+.pagination li.current a {background-position:0 -12px;}
+
+/* Caption */
+.caption {display: inline-block; z-index:500; left:0.6em; min-height:5em; height: auto !important; height:5em; background:#363636; opacity: 0.9; width: 710px; color:#fff;}
+.caption a {color: #fff; font-size: 0.85em; background: transparent}
+.caption h1 {color: #fff; font-size: 0.9em; margin: 0.2em 0.4em 0.6em 0.7em; font-weight: bold; text-align: justify; background: transparent}
+.caption p {color: #fff; font-size: 0.75em; margin: 0.2em 0.4em 0.6em 0.7em; text-align: justify; background: transparent}
+.caption p.mas a {float: right; text-align: right; width: 50px; color: #fff; margin: 0.8em 0.2em 0 0; padding-left: 1.6em; font-weight: bold; background: transparent url("../img/mas.png") left no-repeat;}
+.caption p.mas a:hover {text-decoration: underline;}
+.caption a {text-decoration: none; font-size: 100%;}
+
+#fondo #head #opciones #bloquearriba #derecha {background:#fff; width: auto; margin: 1em 0 0 0.2em}
+/* Atencion al ciudadano */
+#fondo #head #opciones #bloquearriba #derecha .atencion {display: none; float: left; margin: 0 0.8em 0.4em 0.8em; padding: 0; width: 13em; min-height:4em; height: auto !important; height: 4em; border: 1px solid #BABABA; background: #fff url("../img/fondo-atencion.png") no-repeat bottom right;}
+#fondo #head #opciones #bloquearriba #derecha .atencion:hover {border: 1px solid #E2A43D;}
+#fondo #head #opciones #bloquearriba #derecha .atencion p {font-size: 1.1em; color: #1D518B; font-weight: bold; margin:0.2em 0 0 0; padding:0; text-align:center; line-height: 0.9em}
+#fondo #head #opciones #bloquearriba #derecha .atencion a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block; padding:0;}
+#fondo #head #opciones #bloquearriba #derecha .atencion a:hover {color: #1D518B; font-weight: bold; text-decoration: none}
+
+#fondo #head #opciones #bloquearriba #derecha .atencion p span {display:inline-block; font-size:0.85em; font-weight: bold; padding:0 0.2em; margin:0; text-align:left; width:95%;}
+#fondo #head #opciones #bloquearriba #derecha .atencion p span em {color:#1D518B; font-size:85%; float:right; display:inline-block; margin:0 3em 0 0; font-style:normal;}
+#fondo #head #opciones #bloquearriba #derecha .atencion span.texto-a {color:#1D518B; margin:0.4em 0 0 0.4em; padding: 0}
+#fondo #head #opciones #bloquearriba #derecha .atencion span.texto-b {color:#1D518B; margin:0 0 0 0.4em; padding: 0}
+
+*+html #fondo #head #opciones #bloquearriba #derecha .atencion p span em {float:right; margin:-0.9em 2.2em 0 0; display:inline-block;}
+
+/* Registro General */
+#fondo #head #opciones #bloquearriba #derecha div.registro {display: none; float: left; margin:0em 0.8em 0.4em 0.8em; padding: 0; width:13em; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/fondo-registro.png") no-repeat right; text-align: left;}
+#fondo #head #opciones #bloquearriba #derecha div.registro:hover {border: 1px solid #E2A43D;}
+#fondo #head #opciones #bloquearriba #derecha div.registro p {font-size: 1.1em; color: #1D518B; font-weight: bold; margin: 0.1em 3em 0.1em 0.4em; background: transparent; padding:0.15em 0.25em; line-height:1.5em;}
+#fondo #head #opciones #bloquearriba #derecha div.registro a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#fondo #head #opciones #bloquearriba #derecha div.registro a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent;}
+#fondo #head #opciones #bloquearriba #derecha div.registro p span {color: #1D518B; font-weight: bold; margin:0; background: transparent; display: block}
+#fondo #head #opciones #bloquearriba #derecha div.registro strong {}
+
+/* Sede */
+#fondo #head #opciones #bloquearriba #derecha .sede {display: none; float: left; margin: 0 0.8em 0.4em 0.8em; padding: 0; width: 13em; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/fondo-sede.png") no-repeat right; text-align: left;}
+#fondo #head #opciones #bloquearriba #derecha .sede:hover {border: 1px solid #E2A43D;}
+#fondo #head #opciones #bloquearriba #derecha .sede p {font-size: 1.2em; color: #1D518B; font-weight: bold; margin: 0.4em 0 0 0.5em; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .sede a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#fondo #head #opciones #bloquearriba #derecha .sede p span {font-size: 0.95em; color: #1D518B; font-weight: bold; margin: 0.1em 0 0.1em 0em; background: transparent; display: block}
+#fondo #head #opciones #bloquearriba #derecha .sede a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .sede p.texto-a {font-size: 0.7em; color: #000; font-weight: bold; margin: 0.4em 0em 0.1em 1.1em;}
+#fondo #head #opciones #bloquearriba #derecha .sede strong {display: block}
+
+/* Becas*/
+#fondo #head #opciones #bloquearriba #derecha .becas {display: none; float: left; margin: 0 0.8em 0.4em 0.8em; padding: 0; width: 13em; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/fondo-becas.png") no-repeat bottom right; text-align: left;}
+#fondo #head #opciones #bloquearriba #derecha .becas:hover {border: 1px solid #E2A43D;}
+#fondo #head #opciones #bloquearriba #derecha .becas p {font-size: 1.1em; color: #1D518B; font-weight: bold; margin: 0.4em 2.9em 0em 0.4em; padding: 0.3em; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .becas a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#fondo #head #opciones #bloquearriba #derecha .becas a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .becas p span {font-size: 1.2em; color: #1D518B; font-weight: bold;  margin: 0em 0 0em 0em;}
+#fondo #head #opciones #bloquearriba #derecha .becas p span.mg {font-size: 1em; color: #1D518B; font-weight: normal; margin: 0em 0 0em 0em; padding: 0}
+#fondo #head #opciones #bloquearriba #derecha .becas p strong {font-size: 1.5em; color: #1D518B; font-weight: bold; margin: 0em 0 0em 0em; background: transparent}
+
+/* Homologacion */
+#fondo #head #opciones #bloquearriba #derecha .homologaciones {display: none; float: left; margin: 0 0.8em 0.4em 0.8em; padding: 0; width: 13em; min-height:3.9em; height: auto !important; height: 3.9em; border: 1px solid #b8b8b8; background: #fff url("../img/fondo-homologaciones.png") no-repeat right; text-align: left;}
+#fondo #head #opciones #bloquearriba #derecha .homologaciones:hover {border: 1px solid #E2A43D;}
+#fondo #head #opciones #bloquearriba #derecha .homologaciones p {font-size: 1em; color: #1D518B; font-weight: normal; margin: 0.6em 0 0.1em 0.7em; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .homologaciones a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#fondo #head #opciones #bloquearriba #derecha .homologaciones a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .homologaciones p strong {font-size: 1.1em; color: #1D518B; font-weight: bold; background: transparent}
+#fondo #head #opciones #bloquearriba #derecha .homologaciones strong {display: block}
+
+/* Bloque abajo */
+#bloqueabajo {width: auto; margin: 0em auto 0em auto; background:#fff;}
+
+#bloqueabajo #columnas {margin: 1em 0 0 0; padding: 0; background:#fff;}
+
+/* Columna primera */
+#bloqueabajo #columnas #colprimera {clear: both; width: auto; margin: 0.2em 0.4em 0em 0.6em;}
+
+#bloqueabajo #columnas #colprimera #areas-educacion h1 {border-bottom: 0px; margin: 0.4em 0 0 0; padding: 0.2em 0.4em 0em 0.4em; color: #1D7474; font-weight: bold; font-size: 1em; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-educacion ul li {background: transparent url("../img/ul-educacion.png") left no-repeat; list-style-type: none; margin: 0; padding: 0em 0.4em 0.4em 1.8em; color: #2D5582; font-weight: bold; font-size: 0.8em; border-bottom: 0px;}
+#bloqueabajo #columnas #colprimera #areas-educacion ul li a {color: #1D7474; text-decoration: none; font-weight: bold; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-educacion .mas a {display: none}
+
+#bloqueabajo #columnas #colprimera #areas-cultura h1 {border-bottom: 0px; margin: 0.4em 0 0 0; padding: 0.2em 0.4em 0em 0.4em; color: #9E1B50; font-weight: bold; font-size: 1em; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-cultura ul li {border-bottom: 0px; background: transparent url("../img/ul-cultura.png") left no-repeat; list-style-type: none; margin: 0; padding: 0.4em 0.4em 0.4em 1.8em; color: #2D5582; font-weight: bold; font-size: 0.8em; border-bottom: 0px;}
+#bloqueabajo #columnas #colprimera #areas-cultura ul li a {color: #9E1B50; text-decoration: none; font-weight: bold; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-cultura .mas a {display: none}
+
+#bloqueabajo #columnas #colprimera #areas-deporte h1 {border-bottom: 0px; margin: 0.4em 0 0 0; padding: 0.2em 0.4em 0em 0.4em; color: #9B6C00; font-weight: bold; font-size: 1em; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-deporte ul li {border-bottom: 0px; background: transparent url("../img/ul-deporte.png") left no-repeat; list-style-type: none; margin: 0; padding: 0.4em 0.4em 0.4em 1.8em; color: #2D5582; font-weight: bold; font-size: 0.8em; border-bottom: 0px;}
+#bloqueabajo #columnas #colprimera #areas-deporte ul li a {color: #9B6C00; text-decoration: none; font-weight: bold; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-deporte .mas a {display: none}
+
+
+/* Columna segunda */
+#bloqueabajo #columnas #colsegunda {margin: 0.2em 0em 0em 0em;}
+
+#bloqueabajo #columnas #colsegunda #actualidad {/*min-height:5em; height: auto !important; height:5em;*/ background: #fff; width: auto; padding: 0; margin: 0 0 1em 0; border-top: 8px solid #1C528A}
+	#bloqueabajo #columnas #colsegunda #actualidad .titulo {background: #fff;}
+	#bloqueabajo #columnas #colsegunda #actualidad .titulo div {margin-left: 0em}
+	#bloqueabajo #columnas #colsegunda #actualidad .titulo h1 {font-size: 1.5em; color: #2D5582; padding: 0.3em; margin: 0; background: transparent; font-weight: normal}
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto {font-family: arial, helvetica, sans-serif; background: #fff;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul {margin: 0em 0.6em 0em 0.4em; padding: 0em 0.2em;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li {list-style-image: none; list-style-type: none; margin: 0.2em 0; padding: 0; text-align: justify; clear: both; display: inline-block; border-bottom: 1px dotted #666; width: 100%;}
+	*+ html #bloqueabajo #columnas #colsegunda #actualidad .texto ul li {list-style-image: none; list-style-type: none; margin: 0.5em 0; padding: 0; text-align: justify; clear: both; display: inline-block; border-bottom: 1px dotted #666; width: 100%;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li a.noticia {color: #2D5582; font-weight: bold; display: block; margin: 0.1em 0 0.3em 0; padding: 0; font-size: 0.75em; line-height: 1.3em; text-decoration: none}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li a.noticia:hover {text-decoration: underline}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li span {color: #535353; font-weight: normal; font-size: 0.7em; margin: 0em 0.4em 0.2em 0em; padding: 0;}
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-h {width:6.3em; height:4.8em; margin: 0.4em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-v {width:4.8em; height:6.3em; margin: 0.4em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left;}
+	
+	*+ html #bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-h {width:6.3em; height:4.8em; margin: 0.2em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left; }
+	*+ html #bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-v {width:4.8em; height:6.3em; margin: 0.2em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left; }
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li p {font-size: 0.75em; margin: 0.2em 0; line-height: 1.3em;}
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto .vermas {display: none}
+
+/* Columna tercera */
+
+#bloqueabajo #columnas #coltercera {margin: 0.2em 0em 0em 0em;}
+
+/* Novedades */
+#bloqueabajo #columnas #coltercera .novedades {margin: 0em 0 0.4em 0.1em; padding: 0 0em 0.2em 0em; border: 1px solid #9a9a9b; background: #fff url("../img/fondo-novedades.png") no-repeat bottom right; text-align: left;}
+*+ html #bloqueabajo #columnas #coltercera .novedades {margin: 0em 0 0.4em 0.1em; padding: 0 0em 0.8em 0em; width: 13em; border: 1px solid #9a9a9b; background: #fff url("../img/fondo-novedades.png") no-repeat bottom right; text-align: left;}
+#bloqueabajo #columnas #coltercera .novedades h2 {background: #1C5493; color: #fff; padding: 0.4em; font-size:1em; margin: 0}
+#bloqueabajo #columnas #coltercera .novedades ul {margin: 0em 0 0.2em 0.1em; padding: 0.2em 0.1em 0.2em 0.1em;}
+#bloqueabajo #columnas #coltercera .novedades ul li {margin:0.2em 0.2em 0.2em 0; padding:0.1em 0 0.2em 0; line-height:1.4em; background: url("../img/ul-novedadespeq.png") 0 2px no-repeat; list-style:none; color: #000; font-weight: normal; font-size: 0.7em; border-bottom:1px dotted #4B4B4B}
+#bloqueabajo #columnas #coltercera .novedades ul li.sinborde {border-bottom:0px}
+#bloqueabajo #columnas #coltercera .novedades ul li a {color:#4B4B4B; padding:0 0.2em 0.3em 1.3em; text-decoration:none; display:inline-block; }
+#bloqueabajo #columnas #coltercera .novedades ul li a:hover {color: #000; text-decoration:none; }
+#bloqueabajo #columnas #coltercera .novedades ul li span.nuevo {color: #BF021E; margin: 0 0 0 0.4em; font-weight: normal}
+
+/* Destacados */
+#bloqueabajo #columnas #coltercera .destacados {margin: 0em 0 0.4em 0.1em; padding: 0 0em 0.2em 0em; border: 1px solid #9a9a9b; background: #fff url("../img/fondo-destacados.png") no-repeat bottom right; text-align: left;}
+*+ html #bloqueabajo #columnas #coltercera .destacados {margin: 0em 0 0.4em 0.1em; padding: 0 0em 0.9em 0em; width: 13em; border: 1px solid #9a9a9b; background: #fff url("../img/fondo-destacados.png") no-repeat bottom right; text-align: left;}
+#bloqueabajo #columnas #coltercera .destacados h2 {background: #1C5493; color: #fff; padding: 0.4em; font-size:1em; margin: 0}
+#bloqueabajo #columnas #coltercera .destacados ul {margin: 0em 0 0.2em 0.1em; padding: 0.2em 0.1em 0.2em 0.1em;}
+#bloqueabajo #columnas #coltercera .destacados ul li {margin:0.2em 0.2em 0.2em 0; padding:0.1em 0 0.2em 0; line-height:1.4em; background: url("../img/ul-destacadospeq.png") 0 2px no-repeat; list-style:none; color: #000; font-weight: normal; font-size: 0.7em; border-bottom:1px dotted #4B4B4B}
+#bloqueabajo #columnas #coltercera .destacados ul li.sinborde {border-bottom:0px}
+#bloqueabajo #columnas #coltercera .destacados ul li a {color:#4B4B4B; padding:0 0.2em 0.3em 1.3em; text-decoration:none; display:inline-block; }
+#bloqueabajo #columnas #coltercera .destacados ul li a:hover {color: #000; text-decoration:none; }
+#bloqueabajo #columnas #coltercera .destacados ul li span.nuevo {color: #BF021E; margin: 0 0 0 0.4em; font-weight: normal}
+
+/* Ayudas y subvenciones */
+#bloqueabajo #columnas #coltercera .subvenciones {display: none; margin: 0 0 6px 0.1em; padding: 0; width: 13em; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/subvenciones.png") no-repeat right; text-align: left;}
+#bloqueabajo #columnas #coltercera .subvenciones:hover {border: 3px solid #E2A43D; margin: 0 0 2px 0em;}
+#bloqueabajo #columnas #coltercera .subvenciones p {font-size: 1em; color: #1D518B; font-weight: normal; line-height: 1.2em; margin: 0.8em 0 0.2em 0.5em; padding: 0; background: transparent}
+#bloqueabajo #columnas #coltercera .subvenciones a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#bloqueabajo #columnas #coltercera .subvenciones a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent}
+#bloqueabajo #columnas #coltercera .subvenciones p strong {font-size: 1.1em; color: #1D518B; font-weight: bold; line-height: 1.2em; margin: 0em 0 0em 0em; padding: 0; background: transparent; display: block}
+
+/* Publicaciones */
+#bloqueabajo #columnas #coltercera .publicaciones {display: none; margin: 0 0 6px 0.1em; padding: 0; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/publicaciones.png") no-repeat right; text-align: left;}
+#bloqueabajo #columnas #coltercera .publicaciones:hover {border: 3px solid #E2A43D; margin: 0 0 2px 0em;}
+#bloqueabajo #columnas #coltercera .publicaciones p {font-size: 1.2em; color: #1D518B; font-weight: normal; line-height: 1.4em; margin: 0.8em 0 0.2em 0.5em; padding: 0; background: transparent}
+#bloqueabajo #columnas #coltercera .publicaciones a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#bloqueabajo #columnas #coltercera .publicaciones a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent}
+#bloqueabajo #columnas #coltercera .publicaciones p strong {font-size: 1.1em; color: #1D518B; font-weight: bold; line-height: 1.4em; margin: 0em 0 0em 0em; padding: 0; background: transparent}
+
+/* Registro General */
+#bloqueabajo #columnas #coltercera .registro {display: none; margin: 0 0 6px 0.1em; padding: 0; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/fondo-registro.png") no-repeat right; text-align: left;}
+#bloqueabajo #columnas #coltercera .registro:hover {border: 3px solid #E2A43D; margin: 0 0 2px 0em;}
+#bloqueabajo #columnas #coltercera .registro p {font-size: 1.1em; color: #1D518B; font-weight: bold; margin: 0.1em 3em 0.1em 0.4em; background: transparent; padding:0.15em 0.25em; line-height:1.5em;}
+#bloqueabajo #columnas #coltercera .registro a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#bloqueabajo #columnas #coltercera .registro a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent;}
+#bloqueabajo #columnas #coltercera .registro p span {color: #1D518B; font-weight: bold; margin:0; background: transparent; display: block}
+#bloqueabajo #columnas #coltercera .registro strong {}
+
+/* Estadisticas */
+#bloqueabajo #columnas #coltercera .estadisticas {display: none; margin: 0 0 6px 0.1em; padding: 0; min-height:4em; height: auto !important; height: 4em; border: 1px solid #b8b8b8; background: #fff url("../img/estadisticas.png") no-repeat right; text-align: left;}
+#bloqueabajo #columnas #coltercera .estadisticas:hover {border: 3px solid #E2A43D; margin: 0 0 2px 0em;}
+#bloqueabajo #columnas #coltercera .estadisticas p {font-size: 1.1em; color: #1D518B; font-weight: bold; line-height: 1.4em; margin: 1.2em 0 0.2em 0.5em; padding: 0; background: transparent}
+#bloqueabajo #columnas #coltercera .estadisticas a {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent; display: block}
+#bloqueabajo #columnas #coltercera .estadisticas a:hover {color: #1D518B; font-weight: bold; text-decoration: none; background: transparent}
+
+
+/* Portales de interes */ 
+#portales-interes {width: auto; background: #cad4da; width: auto; margin: 0.6em; border-top: 0px solid #236FBD; padding: 0.5em}
+#portales-interes h2 {font-size: 0.85em; margin: 0em 0.2em; color: #0A2849}
+	#portales-interes ul {margin: 0.2em auto 0 auto; padding: 0; text-align: left}
+	#portales-interes ul li {display: inline; list-style-image: none; list-style-type: none; margin: 0em; padding: 0em; text-align: left;}
+	#portales-interes ul li img {width: 60px; height: 50px; vertical-align: middle; margin: 0.2em auto; padding: 0.3em 0.4em 0.3em 0.8em; background: url('../img/fon-enlaces.gif'); border: 0px}
+
+/* Organismos dependientes */ 
+#organismos-dependientes {width: auto; background: #9ab1c4; width: auto; margin: 0.4em; border: 0px solid #cdd6db; padding: 0.5em}
+#organismos-dependientes h2 {font-size: 0.85em; margin: 0em 0.2em}
+	#organismos-dependientes ul {margin: 0.2em auto 0 auto; padding: 0; text-align: left}
+	#organismos-dependientes ul li {display: inline; list-style-image: none; list-style-type: none; margin: 0em; padding: 0em; text-align: left;}
+	#organismos-dependientes ul li img {width: 60px; height: 50px; vertical-align: middle; margin: 0.2em auto; padding: 0.3em 0.4em 0.3em 0.8em; background: url('../img/fon-enlaces.gif'); border: 0px}
+
+/* Enlaces de interes */ 
+#enlaces-institucionales {width: auto; background: #8AACCA; width: auto; margin: 0.4em; border: 0px solid #cdd6db; padding: 0.5em}
+#enlaces-institucionales h2 {font-size: 0.85em; margin: 0em 0.2em}
+	#enlaces-institucionales ul {margin: 0.2em auto 0 auto; padding: 0; text-align: left}
+	#enlaces-institucionales ul li {display: inline; list-style-image: none; list-style-type: none; margin: 0em; padding: 0em; text-align: left;}
+	#enlaces-institucionales ul li img {width: 60px; height: 50px; vertical-align: middle; margin: 0.2em auto; padding: 0.3em 0.4em 0.3em 0.8em; background: url('../img/fon-enlaces.gif'); border: 0px}
+
+/* Lista pie */
+#footer {width: auto; background:#fff; margin: 0 auto; padding-bottom: 0.8em}
+#footer .columna {width: 18em; float: left; }
+#footer .columna h3 {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.9em; color: #000; background: transparent}
+#footer .columna h3 a {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #000; text-decoration: none; background: transparent}
+#footer .columna h3 a:hover {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #000; text-decoration: underline; background: transparent}
+#footer .columna h4 {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #000; background: transparent}
+#footer .columna h4 a {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #000; text-decoration: none; background: transparent}
+#footer .columna h4 a:hover {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #000; text-decoration: underline; background: transparent}
+#footer .columna ul.none {margin: 0.2em 0.2em 0.2em 1em; padding: 0.2em 0.2em 0.2em 2em; border-left: 0px solid #597C8E}
+#footer .columna ul {margin: 0.2em 0.2em 0.2em 1em; padding: 0.2em 0.2em 0.2em 2em; border-left: 1px solid #597C8E}
+#footer .columna ul li {list-style-image: url('../img/arrow-menu.png'); font-size: 0.75em; margin: 0.4em 0; text-align: left}
+	#footer .columna ul ul  {margin: 0.2em 0.2em 0.2em 1.6em; padding: 0.2em 0.2em 0.2em 1.6em}
+	#footer .columna ul ul li {list-style-image: url('../img/arrow-menu-2.png'); font-size: 100%; margin: 0.4em 0; text-align: left}
+	#footer .columna ul li a {color: #000; text-decoration: none; font-weight: normal; background: transparent}
+	#footer .columna ul li a:hover {color: #000; text-decoration: underline; background: transparent}
+
+/* Contenido pie de pagina */
+#pie {clear: both; width:100%; margin: 0em auto 0em auto; padding: 1em 0 2em 0; text-align: center; background:#fff;}
+#pie #accessible {clear: both; width: auto; margin: 0em auto 0em auto; padding-top: 1em; text-align: center;}
+#pie #accessible p {font-size: 0.75em; margin: 0.9em 0 0 0; color:#000; margin:0; padding:0.3em; display:inline-block; width:100%;}
+#pie #accessible p a {text-decoration:none; border:0; color:black;}
+#pie #accessible p a img {width:auto; margin:0; padding:0.1em;}
+
+#pie #accessible ul.w3c {font-size:75%; margin:0.4em 0 0.2em 0; padding: 0; text-align:center; width:auto; display:inline-block;}
+#pie #accessible ul.w3c li {padding:0.3em; list-style-type:none; display:inline; border:0; margin:0.4em; width:auto;}
+
+#pie #accessible ul {font-size:70%; margin:0.4em 0 1em 0; padding:0; text-align:center; width:auto;}
+#pie #accessible ul li {padding:0 0.9em 0 0.9em; list-style-type:none; display:inline; border-right: 1px solid #000;}
+#pie #accessible ul li.ultimo {border-right:none;}
+#pie #accessible ul li a {color:black; text-decoration:none;}
+#pie #accessible ul li a:hover {text-decoration: underline;}
+
+/* Carrusel de iconos */
+.carousel {padding: 0px 0 0 0; margin: 0 0 0px 0px;}
+.main {margin-left: 20px;}
+
+/*Para el segundo carrusel*/
+.carouselb {padding: 0px 0 0 0; margin: 0 0 0px 0px;}
+.mainb {margin-left: 20px;}
+
+.carousel a.prev {display: none}
+.carousel a.next {display: none}
+.carouselb a.prev {display: none}
+.carouselb a.next {display: none}

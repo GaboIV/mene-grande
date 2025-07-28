@@ -1,0 +1,539 @@
+/*
+Ministerio de Educación, Cultura y Deporte
+© Copyright 2013
+Todos los derechos reservados.
+*/
+
+body {margin: 0; padding: 0; font-family: arial, helvetica, sans-serif; color: #000}
+iframe.tagmanager {display:none; visibility:hidden; height:0.1em; width:0.1em;}
+img {border: 0;}
+.clear {clear: both;}
+
+
+/* Estilos para la cabecera superior */
+#fondo {background:  #F5F2E9 url("../img/fondo-cabecera.png") top left repeat-x; margin: 0 auto}
+#fondo #head {width: 60em; min-height: 7em; height: auto !important; height: 7em; margin: 0 auto; padding: 0; display: block; position: relative; }
+#fondo #head #escudo {position: absolute; z-index: 1; left: 0; top: 0.5em; margin: 0;}
+#fondo #head #escudo img {width:16.563em; height:3.750em;}
+
+#fondo #head .fecha {position: absolute; left: 27.2em; top: 3em; margin: 0; white-space:nowrap; text-decoration: none; font-size:0.75em; font-weight: bold; color: #3E3E40;}
+
+/* Menu superior idiomas */
+#fondo #head #menusup {width: 60em;  height: 1.8em; /*min-height:1.5em; height: auto !important; height:1.5em; */ }
+
+#fondo #head #menusup #enlaces {float: left; margin:0.2em 0 0 16.4em; padding:0em 0.1em 0 0em;}
+#fondo #head #menusup #enlaces ul {list-style-type:none; margin:0; padding:0em 0 0.1em 0;}
+#fondo #head #menusup #enlaces ul li {display:inline; list-style-type:none; margin:0;}
+#fondo #head #menusup #enlaces ul li a {white-space:nowrap; text-decoration: none; font-size:0.75em; font-weight: bold; color: #3E3E40; }
+#fondo #head #menusup #enlaces ul li a:hover {text-decoration: underline; color: #3E3E40; }
+#fondo #head #menusup #enlaces ul li:first-child {display:inline; list-style-type:none; margin:65px; background:none;}
+
+#fondo #head #menusup #idiomas {float: right; margin:0.2em 0 0 0em;}
+#fondo #head #menusup #idiomas ul {list-style-type:none; margin:0; padding:0em 0 0.1em 0;}
+#fondo #head #menusup #idiomas ul li {display:inline; list-style-type:none; margin:0; padding:0 0.2em 0 0.4em; background: transparent url("../img/separador.png") left no-repeat;}
+#fondo #head #menusup #idiomas ul li a {white-space:nowrap; text-decoration: none; font-size:0.7em; font-weight: bold; color: #3E3E40; }
+#fondo #head #menusup #idiomas ul li a:hover {text-decoration: underline;}
+#fondo #head #menusup #idiomas ul li.primero {background:none;}
+#fondo #head #menusup #idiomas ul li.ultimo {padding-right: 0;}
+
+/* Menu superior enlaces */
+#fondo #head #opciones {clear: both; min-height: 5.5em; height: auto !important; height: 5.5em; position: relative; display: block;  }
+
+/* Crespon */
+#fondo #head #opciones #redes-sociales img.crespon {margin-left: 6.5em; width: 2em; float:left;}
+
+/* Redes sociales */
+#fondo #head #opciones #redes-sociales {width: 19em; height: 2.5em; margin: 0 0 0 23em; padding: 0; position: relative; z-index: 11; float: left; }
+#fondo #head #opciones #redes-sociales img {margin: 0 0.1em;}
+
+#fondo #head #opciones #redes-sociales #nav {padding:0; margin: 0; list-style-type: none; font-weight: bold; font-size: 0.9em; font-family: arial, helvetica, sans-serif; float: right}
+	#fondo #head #opciones #redes-sociales #nav ul {padding: 0.1em 0 0.4em 0.8em; margin: 0; list-style-type: none; text-align: left}
+	#fondo #head #opciones #redes-sociales #nav li {float: left; margin: 0.3em 0 0 0; padding: 0; position: relative; /*width: 18%;*/ }
+	#fondo #head #opciones #redes-sociales #nav a {padding: 0.1em 0.2em 0.1em 0em; display: block; color: #1F3F52; text-decoration: none}
+	#fondo #head #opciones #redes-sociales #nav a:hover {color: #1F3F52}
+	#fondo #head #opciones #redes-sociales #nav a:focus {color: #1F3F52}
+	#fondo #head #opciones #redes-sociales #nav ul {font-weight: normal; font-size: 0.85em; background: #EBF0F6; left: 0px; width: 7em; line-height:1.4em; position: absolute; top: 2.2em; border-bottom: 3px solid #3882CD}
+	*+html #fondo #head #opciones #redes-sociales #nav ul {font-weight: normal; font-size: 0.85em; background: #EBF0F6; left: 0px; width: 7em; line-height:1.4em; position: absolute; top: 2.1em;}
+
+	#fondo #head #opciones #redes-sociales #nav ul li {width: 6em; background: #EBF0F6 url("../img/ul-1.png") no-repeat left; padding: 0 0.1em 0 0.7em;}
+	#fondo #head #opciones #redes-sociales #nav ul a {background: none transparent scroll repeat 0% 0%; padding: 0 0 0 0.1em; width: 6em;}
+	#fondo #head #opciones #redes-sociales #nav ul a:hover {text-decoration: underline}
+
+	#fondo #head #opciones #redes-sociales #nav ul a.inactivo {background: none transparent scroll repeat 0% 0%; padding: 0 0 0 0.1em; width: 6em; color: #666; text-decoration: none; cursor: default}
+
+	#fondo #head #opciones #redes-sociales #nav ul {margin-left: -9999px;}
+	#fondo #head #opciones #redes-sociales #nav :hover ul ul {margin-left: -9999px;}
+	#fondo #head #opciones #redes-sociales #nav .hover ul ul {margin-left: -9999px;}
+	#fondo #head #opciones #redes-sociales #nav li:hover > ul {margin-left: 0;}
+	#fondo #head #opciones #redes-sociales #nav li.hover > ul {margin-left: 0;}
+	#fondo #head #opciones #redes-sociales #nav a:focus + ul {margin-left: 0}
+	#fondo #head #opciones #redes-sociales #nav ul ul {margin-left: 0;}
+	#fondo #head #opciones #redes-sociales #nav .hover a:focus {margin-left: 0}
+
+/* Traductor */
+#head #opciones #traductor #google_translate_element .goog-te-gadget-simple {background-color: #FFFFFF; border:1px solid #3C85D0; font-size: 10pt; display: inline-block; cursor: pointer; /*zoom: 1;*/ margin-top: 0.58em; float: right; margin-right:0.3em;}
+
+/* Pestanias */
+#fondo #head #opciones #pestanias {clear: both; width: 40em; min-height:3em; height: auto !important; height:3em; float: left; z-index: 10; position: relative}
+
+#fondo #head #opciones #pestanias #tab {padding:5px 0 0 0; margin: 4px 0 0 0; list-style-type: none; font-weight: normal; font-size: 0.84em; font-family: arial, helvetica, sans-serif;}
+	#fondo #head #opciones #pestanias #tab ul {padding: 0 0 0 0.8em; margin: 0 0 0 0; list-style-type: none;}
+	#fondo #head #opciones #pestanias #tab li {text-align: center; min-width: 4.8em; height: 2.3em; float: left; margin: 0em 0.05em 0 0.1em; padding: 2.3px 5px; position: relative; background: url("../img/pestania.png") no-repeat top left; border-bottom: 1px solid #E0E8EB}
+	
+	#fondo #head #opciones #pestanias #tab a {padding: 0.7em 0.2em 0.2em 0.2em;  display: block; color: #164272; text-decoration: none}
+	#fondo #head #opciones #pestanias #tab a:hover {color: #164272; background: transparent url("../img/tab-tr.png") no-repeat top right}
+	#fondo #head #opciones #pestanias #tab a:focus {color: #164272; background: transparent url("../img/tab-tr.png") no-repeat top right}
+	#fondo #head #opciones #pestanias #tab ul {padding-top: 0.8em; font-weight: normal; font-size: 0.8em; background: #EBF0F6; left: 0px; width: 23.6em; position: absolute; top: 2.95em; border-bottom: 3px solid #3882CD; border-top: 1px solid #345A5B}
+	*+html #fondo #head #opciones #pestanias #tab ul {font-weight: normal; font-size: 0.8em; background: #EBF0F6; left: 0px; width: 23.6em; position: absolute; top: 3em;}
+
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado {font-size: 1em; float: left; margin: 0em 0.05em 0 0.1em; padding: 2.3px 5px; position: relative; min-width: 4.8em; background: url("../img/seleccionado.png") no-repeat top left; border-bottom: 1px solid #1C5493}
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado a {padding: 0.7em 0.2em 0.9em 0.2em; background: transparent url("../img/tab-tr-seleccionado.png") no-repeat top right; display: block; color: #fff; text-decoration: none}
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado a:hover {color: #fff; background: transparent url("../img/tab-tr-seleccionado.png") no-repeat top right}
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado a:focus {color: #fff; background: transparent url("../img/tab-tr-seleccionado.png") no-repeat top right}
+
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado ul li a {padding: 0em 0.2em 0em 1em; background: none; display: block; color: #000; text-decoration: none}
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado ul li a:hover {color: #000; background: none; text-decoration: underline}
+	#fondo #head #opciones #pestanias ul#tab li.seleccionado ul li a:focus {color: #000; background: transparent}
+
+	#fondo #head #opciones #pestanias #tab ul li {text-align: left; width: 20em; background: #EBF0F6 url("../img/ul-1.png") 1% 20% no-repeat; padding: 0 0.2em 0 0.2em; margin: 0; border-bottom: none; font-size: 1.1em}
+	#fondo #head #opciones #pestanias #tab ul li a {background: none;}
+	#fondo #head #opciones #pestanias #tab ul a {background: none; padding: 0 0 0 1em; width: 20.5em; margin: 0; color: #000}
+	#fondo #head #opciones #pestanias #tab ul a:hover {text-decoration: underline; color: #000; background: none}
+	#fondo #head #opciones #pestanias #tab ul a:focus {color: #000; background: none}
+
+	#fondo #head #opciones #pestanias ul#tab strong {display: block; font-size: 0.7em; line-height: 0.5em; padding: 0}
+	#fondo #head #opciones #pestanias ul#tab a.lineal {font-size: 1em; line-height: 1em; padding: 0.2em 0.6em 0.2em 0.6em; text-align: center}
+
+	#fondo #head #opciones #pestanias #tab ul {margin-left: -9999px;}
+	#fondo #head #opciones #pestanias #tab :hover ul ul {margin-left: -9999px}
+	#fondo #head #opciones #pestanias #tab .hover ul ul {margin-left: -9999px}
+	#fondo #head #opciones #pestanias #tab li:hover > ul {margin-left: 0;}
+	#fondo #head #opciones #pestanias #tab li.hover > ul {margin-left: 0;}
+	#fondo #head #opciones #pestanias #tab a:focus + ul {margin-left: 0}
+	#fondo #head #opciones #pestanias #tab ul ul {margin-left: 0;}
+	#fondo #head #opciones #pestanias #tab .hover a:focus {margin-left: 0}
+
+/* Buscador */
+#fondo #head #opciones #buscador {float:right; margin:1em 0 0 0; padding:0; width:19.5em; text-align: right; display:block;}
+#fondo #head #opciones #buscador form {margin:0; padding:0; width:100%;}
+#fondo #head #opciones #buscador fieldset {border:none; padding:0; margin:0;}
+*+html #fondo #head #opciones #buscador fieldset {border:none; padding:0; margin:0.2em 0 0 0; display:inline-block;}
+#fondo #head #opciones #buscador fieldset label {display:none;}
+#fondo #head #opciones #buscador input[type="text"] {border:1px solid #4F99AE; font-family: arial, helvetica, sans-serif; background:#fff; display:inline-block; margin:0;}
+#fondo #head #opciones #buscador input[type="submit"] {border:0; cursor:pointer; margin-left: 0.4em;}
+#fondo #head #opciones #buscador input.campotexto {color:#333; font-size:0.7em; width:23.9em; height: 2.2em; padding:2.3px 5px; float:left; margin-top:-4px; }
+#fondo #head #opciones #buscador input.botonbuscar {background: url("../img/botonbuscar.png") no-repeat; width:2em; padding: 0.1em 0.1em 0.4em 0.1em; height:2.2em; margin-top: -3px;}
+*+html #fondo #head #opciones #buscador input.botonbuscar {margin:0.15em 0 0 0; display:inline-block;} 
+
+/* Bloque arriba */
+#fondo #bloquearriba {clear: both; width: 60em; min-height:22.9em; height: auto !important; height:22.9em; margin: 0em auto; padding-top: 0.7em; background: #fff}
+#fondo #bloquearriba #izquierda {display: inline-block; width: 45.875em; height:22em; float: left; margin: 0 0 0 0.24em; border: 1px solid #ccc; background: #fff; /*url("../img/fondo-izquierda.png") bottom repeat-x*/}
+#fondo #bloquearriba #derecha {display: inline-block; background:#fff; width: 13.12em; float: left; margin: 0 0 0 0.45em;}
+*+html #fondo #bloquearriba #derecha {margin-left: 0.47em;}
+
+
+/******************************************************/
+/* BANNERS ********************************************/
+/******************************************************/
+
+/* Estilos generales para banners */
+div.banner {margin: -3px 0 3px -3px; padding: 0; width: 13.12em; height: 4.12em;border: 3px solid transparent; background-color: #fff;position: relative;/* overflow: hidden; */}
+div.banner:hover {border: 3px solid #E2A43D;}
+div.banner a {margin: 0; padding: 0.46em 0.22em 0.1em 0.45em; border: 1px solid #b8b8b8; display: block; font-size: 1.1em; line-height: 1.4em; font-weight: bold; color: #1D518B; text-align: left;text-decoration: none; width: auto; height: 3.1em; overflow: hidden;}
+div.banner a:hover {color: #1D518B;}
+#bloqueabajo #columnas #colprimera div.banner a:hover {color: #1D518B;}
+#bloqueabajo #columnas #coltercera div.banner a:hover {color: #1D518B;}
+div.banner a span {display: block;}
+div.banner:hover a {border: 1px solid transparent;}
+*+ html div.banner a {padding-bottom: 0.14em;}
+
+/* Una línea centrada verticamente */
+div.banner.unaLinea span {margin: 0.68em 0;}
+/* Bannner con imagen */
+div.banner.img img {max-width: 208px; max-height: 64px; min-height: 54px; border: 0px; margin: 0; padding: 0;display: inline-block; position: absolute; top: 1px; right: 1px;}
+*+html div.banner.img a {max-height: 3.05em;}
+
+/* Atencion al ciudadano (016)*/
+div.banner.atencion {background: #fff url("../img/informacion.png") no-repeat right;}
+
+/* Registro General (015)*/
+div.banner.registro {background: #fff url("../img/fondo-registro.png") no-repeat right;}
+
+/* Sede Electronica (012)*/
+div.banner.sede {background: #fff url("../img/alquiler.png") no-repeat right;}
+
+/* Becas, ayudas y subvenciones (013) */
+div.banner.becas {background: #fff url("../img/calendario128.png") no-repeat right}
+div.banner.becas a.peq {padding-bottom: 0.46em; font-size: 1em} /*Usado en euskera y gallego*/
+
+/* Homologaciones (014) -> No modificar color HREF */
+div.banner.homologaciones {background: #fff url("../img/fondo-homologaciones.png") no-repeat right 0.5em;}
+
+/* Estadisticas (019)*/
+div.banner.estadisticas {background: #fff url("../img/estadisticas.png") no-repeat right -0.3em;}
+
+/* Publicaciones y bibliotecas (0110) */
+div.banner.publicaciones {background: #fff url("../img/publicaciones.png") no-repeat right;}
+
+/* Banner Agenda cultura (018)*/
+div.banner.agenda-cultura {background: #fff url("../img/agenda-cultura.png") no-repeat top right;}
+div.banner.agenda-cultura a span span {font-weight: normal; display: inline;}
+
+/* Compromisos calidad (02)*/
+div.banner.compromisos-calidad {background: #fff url("../img/compromisos-calidad.gif") right no-repeat; }
+div.banner.compromisos-calidad a {padding: 0.26em 0.33em; text-align: center;}
+div.banner.compromisos-calidad a span {color:#4D4D4F;}
+div.banner.compromisos-calidad a span span {font-size:0.8em; display: inline;}
+
+/* Base de datos de fundaciones (03)*/
+div.banner.consulta-bd a {padding: 0.26em 0.33em; text-align: center; color:#5F5F61;font-weight: normal; font-family: verdana;}
+
+/* Modelos orientativos (04)*/
+div.banner.modelos-orientativos {background: #fff url("../img/modelos-orientativos.gif") right no-repeat;}
+div.banner.modelos-orientativos a {padding-left: 0.3em; text-align: center;padding-right: 0.35em;}
+div.banner.modelos-orientativos a span span {color:#4D4D4F;}
+
+/* Buenas practicas (08)*/
+div.banner.buenas-practicas {border: none;background: #1C5493 url("../img/buenas-practicas.gif") 6% 50% no-repeat; margin: -0.6em 0 0.42em 0; min-height: 4.15em; height: auto !important; height: 4.15em;}
+div.banner.buenas-practicas a {color: #fff; font-weight: normal;font-size: 0.8em; padding: 1.25em 1.25em 1.25em 4.1em; border: none;}
+
+/* Semana Educación (0111)*/
+div.banner.semanaeducacion {background: #fff url("../img/fondo-semana.jpg") 0.5em 0.8em no-repeat;}
+div.banner.semanaeducacion a {font-size: 1.35em; line-height: 1.1em; padding: 0.42em 0.9em; color: #000; font-weight: lighter; text-align: justify;width: 7.83em;height: 2.109em;}
+div.banner.semanaeducacion a:hover {color: #1D518B;}
+div.banner.semanaeducacion a span {margin: 0 0 0 3.3em; display: inline-block;}
+*+html div.banner.semanaeducacion a span {margin-left: 4.4em;}
+
+/* Tipo CULTURABase */
+div.banner.generico-n a {; font-size: 1.5em; text-align: center; font-weight: normal; font-family: Verdana; color: #333; width: 8em; height: 2.05em; padding-top: 0.5em;}
+div.banner.generico-n a span {font-size: 1.1em; display: inline;}
+div.banner.generico-n a.culturabase span {color: #94214a;}
+div.banner.generico-n a.educabase span {color: #187373;}
+div.banner.generico-n a.deportebase span {color: #9c6b00;}
+
+/* Marca España (0112)*/
+div.banner.marca-espania {background: #fff url("../img/marca-espana.jpg") 93% 0.5em no-repeat;}
+div.banner.marca-espania a {font-size: 0.7em; line-height: 1.5em;  /* padding: 0.9em 9.1em 0.9em 0.45em; */; color: #2F2F2F;font-weight: normal;width: 95%;height: 5em;padding-top: 0.6em;}
+div.banner.marca-espania a span {display: inline-block;width: 49%;}
+div.banner.marca-espania a span strong {font-size: 1.1em; display: inline-block; color:#1D518B;}
+
+/* Congreso */
+div.banner.congreso { background: transparent url("../img/logo-congreso-iberoamericano.png") no-repeat 0.7em 0.21em;}
+div.banner.congreso a {color: #8C8C8B; font-size: 1em; line-height: 1.2em; padding: 0.29em 0.45em 0.29em 4.8em;/* padding-left: 5em; */width: 7.75em;height: 3.45em;}
+div.banner.congreso a:hover {color: #656664 !important;}
+
+/* España es Cultura */
+div.spain-cultura a {color: #333;}
+div.spain-cultura a:hover {color: #333 !important;}
+div.spain-cultura a span {float: right; font-size: 0.6em; width: 9em; margin: 0.4em 0.5em 0.4em 0; text-align: right; display: inline-block;line-height: 1.2em;font-weight: normal; cursor: pointer;}
+div.spain-cultura a img {margin: -0.3em 0.1em 0.2em 0em; border: none;  display: inline-block;width: 84px;}
+*+html div.spain-cultura a span {display: block; float: left; width: 10em;}
+*+html div.spain-cultura a img {float: left;}
+
+/* Cajones genéricos de banners*/
+div.banner.generico a {font-size: 1.1em; font-weight: normal;}
+div.banner.generico a strong {display: block;}
+
+div.banner.generico a.acceso-educacion {border: 1px solid #000; background: #156466; color: #fff; font-size: 0.7em; font-weight: normal; margin: 0.1em 0.1em 0.3em 0.1em; padding: 0.2em 0.5em; cursor: pointer;}
+div.banner.generico a.acceso-cultura {border: 1px solid #000; background: #90244D; color: #fff; font-size: 0.7em; font-weight: normal; margin: 0.1em 0.1em 0.3em 0.1em; padding: 0.2em 0.5em; cursor: pointer;}
+div.banner.generico a.acceso-deporte {border: 1px solid #000; background: #9B6C00; color: #fff; font-size: 0.7em; font-weight: normal; margin: 0.1em 0.1em 0.3em 0.1em; padding: 0.2em 0.5em; cursor: pointer;}
+
+/* Bloque abajo */
+#bloqueabajo {clear: both; width: 60em; min-height:20em; height:auto !important; height:20em; margin: 0em auto 0em auto; background:#fff;}
+#bloqueabajo #columnas {margin: 0em 0 0 0; padding: 0; background:#fff; display: inline-block}
+
+/* Columna primera */
+#bloqueabajo #columnas #colprimera {float: left; width: 12.9em; margin: 0.2em 0.4em 0em 0em; }
+
+#bloqueabajo #columnas #colprimera #areas-educacion {width: 12.9em; background: #fff url("../img/areas-educacion.png") no-repeat bottom right; border: 1px solid #219c9e; border-top: 8px solid #219c9e; margin: 0 0 0.4em 0; padding: 0}
+#bloqueabajo #columnas #colprimera #areas-educacion h1 {border-bottom: 1px solid #219c9e; margin: 0.4em 0 0 0; padding: 0.2em 0.4em 0.4em 0.4em; color: #1D7474; font-weight: bold; font-size: 1em; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-educacion ul {margin: 0em 0 0em 0em; padding: 0em 0 1em 0em;}
+#bloqueabajo #columnas #colprimera #areas-educacion ul li {background: transparent url("../img/ul-educacion.png") 5px 8px no-repeat; list-style-type: none; margin: 0; padding: 0.4em 0.4em 0.4em 1.8em; color: #2D5582; font-weight: bold; font-size: 0.8em; border-bottom: 1px solid #219c9e;}
+#bloqueabajo #columnas #colprimera #areas-educacion ul li:hover {background: #1A7777 url("../img/ul-2-educacion.png") 5px 8px no-repeat; color: #fff; padding: 0.4em 0.4em 0.4em 1.8em; margin: 0}
+#bloqueabajo #columnas #colprimera #areas-educacion ul li:hover a {color: #fff; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-educacion ul li a {color: #1D7474; text-decoration: none; font-weight: bold; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-educacion .mas {width: 8em; margin: 0.4em 0 0.4em 0em; background: #fff url("../img/mas-educacion.png") no-repeat left; padding: 0.4em 0.4em 0.5em 0.5em; font-size: 0.75em}
+#bloqueabajo #columnas #colprimera #areas-educacion .mas a {color: #fff; padding-left: 1em; text-decoration: none; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-educacion .mas a:hover {color: #fff; padding-left: 1em; text-decoration: underline; background: transparent}
+
+#bloqueabajo #columnas #colprimera #areas-cultura {width: 12.9em; background: #fff url("../img/areas-cultura.png") no-repeat bottom right; border: 1px solid #de2a70; border-top: 8px solid #de2a70; margin: 0 0 0.4em 0; padding: 0}
+#bloqueabajo #columnas #colprimera #areas-cultura h1 {border-bottom: 1px solid #de2a70; margin: 0.4em 0 0 0; padding: 0.2em 0.4em 0.4em 0.4em; color: #9E1B50; font-weight: bold; font-size: 1em; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-cultura ul {margin: 0em 0 0em 0em; padding: 0em 0 1em 0em;}
+#bloqueabajo #columnas #colprimera #areas-cultura ul li {background: transparent url("../img/ul-cultura.png") 5px 8px no-repeat; list-style-type: none; margin: 0; padding: 0.4em 0.4em 0.4em 1.8em; color: #2D5582; font-weight: bold; font-size: 0.8em; border-bottom: 1px solid #de2a70;}
+#bloqueabajo #columnas #colprimera #areas-cultura ul li:hover {background: #991A4D url("../img/ul-2-cultura.png") 5px 8px no-repeat; color: #fff; padding: 0.4em 0.4em 0.4em 1.8em; margin: 0}
+#bloqueabajo #columnas #colprimera #areas-cultura ul li:hover a {color: #fff; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-cultura ul li a {color: #9E1B50; text-decoration: none; font-weight: bold; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-cultura .mas {width: 8em; margin: 0.4em 0 0.4em 0em; background: #fff url("../img/mas-cultura.png") no-repeat left; padding: 0.4em 0.4em 0.5em 0.5em; font-size: 0.75em}
+#bloqueabajo #columnas #colprimera #areas-cultura .mas a {color: #fff; padding-left: 1em; text-decoration: none; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-cultura .mas a:hover {color: #fff; padding-left: 1em; text-decoration: underline; background: transparent}
+
+#bloqueabajo #columnas #colprimera #areas-deporte {width: 12.9em; background: #fff url("../img/areas-deporte.png") no-repeat bottom right; border: 1px solid #fcb200; border-top: 8px solid #fcb200; margin: 0 0 0.4em 0; padding: 0}
+#bloqueabajo #columnas #colprimera #areas-deporte h1 {border-bottom: 1px solid #fcb200; margin: 0.4em 0 0 0; padding: 0.2em 0.4em 0.4em 0.4em; color: #826A1C; font-weight: bold; font-size: 1em; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-deporte ul {margin: 0em 0 0em 0em; padding: 0em 0 1em 0em;}
+#bloqueabajo #columnas #colprimera #areas-deporte ul li {background: transparent url("../img/ul-deporte.png") 5px 8px no-repeat; list-style-type: none; margin: 0; padding: 0.4em 0.4em 0.4em 1.8em; color: #826A1C; font-weight: bold; font-size: 0.8em; border-bottom: 1px solid #fcb200;}
+#bloqueabajo #columnas #colprimera #areas-deporte ul li:hover {background: #9B6C00 url("../img/ul-2-deporte.png") 5px 8px no-repeat; color: #fff; padding: 0.4em 0.4em 0.4em 1.8em; margin: 0}
+#bloqueabajo #columnas #colprimera #areas-deporte ul li:hover a {color: #fff; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-deporte ul li a {color: #826A1C; text-decoration: none; font-weight: bold; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-deporte .mas {width: 8em; margin: 0.4em 0 0.4em 0em; background: #fff url("../img/mas-deporte.png") no-repeat left; padding: 0.4em 0.4em 0.5em 0.5em; font-size: 0.75em}
+#bloqueabajo #columnas #colprimera #areas-deporte .mas a {color: #fff; padding-left: 1em; text-decoration: none; background: transparent}
+#bloqueabajo #columnas #colprimera #areas-deporte .mas a:hover {color: #fff; padding-left: 1em; text-decoration: underline; background: transparent}
+
+/* Columna segunda */
+#bloqueabajo #columnas #colsegunda {float: left; width: 32.5em; margin: 0 0.42em 0 0.45em;}
+
+#bloqueabajo #columnas #colsegunda #actualidad {background: #fff; /* width: 32.52em; */ padding: 0; margin: 0 0 1em 0; border-top: 8px solid #1C5493}
+	#bloqueabajo #columnas #colsegunda #actualidad .titulo {background: #fff;}
+	#bloqueabajo #columnas #colsegunda #actualidad .titulo div {margin-left: 0em}
+	#bloqueabajo #columnas #colsegunda #actualidad .titulo h1 {font-size: 1.5em; color: #2D5582; padding: 0.3em; margin: 0; background: transparent; font-weight: normal}
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto {font-family: arial, helvetica, sans-serif; background: #fff;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul {margin: 0em 0.6em 0em 0.4em; padding: 0em 0.2em; }
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li {color:#2F2F2F; list-style-image: none; list-style-type: none; margin: 0.2em 0; padding: 0; text-align: justify; clear: both; display: inline-block; border-bottom: 1px dotted #666; width: 100%;}
+	*+ html #bloqueabajo #columnas #colsegunda #actualidad .texto ul li {list-style-image: none; list-style-type: none; margin: 0.5em 0; padding: 0; text-align: justify; clear: both; display: inline-block; border-bottom: 1px dotted #666; width: 100%;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li a.noticia {color: #2D5582; font-weight: bold; display: block; margin: 0.1em 0 0.3em 0; padding: 0; font-size: 0.75em; line-height: 1.3em; text-decoration: none}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li a.noticia:hover {text-decoration: underline}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li span {color: #535353; font-weight: normal; font-size: 0.7em; margin: 0em 0.4em 0.2em 0em; padding: 0; }
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-h {width:6.3em; height:4.8em; margin: 0.4em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left; }
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-v {width:4.8em; height:6.3em; margin: 0.4em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left; }
+	
+	*+ html #bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-h {width:6.3em; height:4.8em; margin: 0.2em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left; }
+	*+ html #bloqueabajo #columnas #colsegunda #actualidad .texto ul li img.img-v {width:4.8em; height:6.3em; margin: 0.2em 0.8em 0.4em 0em; padding: 0; border: 1px solid #000; float: left; }
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto ul li p {font-size: 0.75em; margin: 0.2em 0; line-height: 1.3em;}
+
+	#bloqueabajo #columnas #colsegunda #actualidad .texto .vermas {text-align: right; color:#fff; margin: 0.5em 0.7em 0.5em 0.5em;}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto .vermas a {font-size: 0.75em; color:#fff; text-decoration: none; font-weight: normal; background: #1C5493; padding: 0.3em 1.8em}
+	#bloqueabajo #columnas #colsegunda #actualidad .texto .vermas a:hover {text-decoration: none;}
+
+/* Columna tercera */
+
+
+/* Box listado (generico) */
+#bloqueabajo #columnas #coltercera {float: left; width: 13.12em; margin: 0;}
+#bloqueabajo #columnas #coltercera ul {font-size:100%; display:inline-block;}
+#bloqueabajo #columnas div.box-listado ul li {font-size:70%; line-height:1.4em; list-style:none; width:auto; border-bottom:1px dotted #4B4B4B; list-style-image:none;}
+#bloqueabajo #columnas #coltercera a {text-decoration:none;}
+#bloqueabajo #columnas #coltercera a:hover {color:#000; text-decoration:none;}
+#bloqueabajo #columnas #coltercera div.box-listado img {margin-top: -0.5em; vertical-align: middle;}
+#bloqueabajo #columnas #coltercera div.box-listado {display:inline-block; width:13em; border:1px solid #aaa; margin: 0 0 0.4em 0; background: #fff}
+#bloqueabajo #columnas #coltercera div.box-listado h2 {text-align: left; margin:0; padding:0.2em 0.3em 0.2em 0.5em; background:#1C5493; color:white; line-height:1.5em; display:inline-block; width:94%; font-size:100%;}
+
+#bloqueabajo #columnas #colprimera {float: left; width: 13.12em; margin: 0 0 0 0.24em;}
+#bloqueabajo #columnas #colprimera ul {font-size:100%; display:inline-block;}
+#bloqueabajo #columnas #colprimera a {text-decoration:none;}
+#bloqueabajo #columnas #colprimera a:hover {color:#000; text-decoration:none;}
+#bloqueabajo #columnas #colprimera div.box-listado img {margin-top: -0.5em; vertical-align: middle;}
+#bloqueabajo #columnas #colprimera div.box-listado {display:inline-block; width:13em; border:1px solid #aaa; margin: 0 0 0.4em 0; background: #fff}
+#bloqueabajo #columnas #colprimera div.box-listado h2 {text-align: left; margin:0; padding:0.2em 0.3em 0.2em 0.5em; background:#1C5493; color:white; line-height:1.5em; display:inline-block; width:94%; font-size:100%;}
+
+#bloqueabajo #columnas div.box-listado ul {margin:0.2em 0em 0.4em 0.1em; padding:0 0 0 0.1em; display:inline-block; width: 96%;}
+#bloqueabajo #columnas div.box-listado ul li {margin:0.2em 0em 0.2em 0; padding:0 0.2em 0.3em 1.3em; line-height:1.4em; background: transparent url('../img/ul-novedadespeq.png') 0 4px no-repeat;}
+#bloqueabajo #columnas div.box-listado ul li.sinborde {border-bottom:0px;}
+#bloqueabajo #columnas div.box-listado ul li a {color:#4B4B4B; padding:0.1em 0 0.2em 0.1em; width:92%; display:inline-block; font-size: 100%}
+#bloqueabajo #columnas div.box-listado ul li a:hover {color: #000; text-decoration:none; }
+#bloqueabajo #columnas div.box-listado ul li span.nuevo {color: #BF021E; margin: 0 0 0 0.4em; font-weight: normal;}
+#bloqueabajo #columnas div.box-listado ul li.azul {margin:0.2em 0.2em 0.2em 0; padding:0.1em 0 0.2em 0; background: transparent url('../img/ico-arrow-menuazul.png') 0 4px no-repeat;}
+
+#bloqueabajo #columnas div.box-listado ul.listado-imagenes {margin:0.2em 0.4em 0.4em 0.2em; padding:0; display:inline-block; width:86%; text-align:center;}
+#bloqueabajo #columnas div.box-listado ul.listado-imagenes li { margin:0.2em 0em 0.2em 0; padding:0.1em 0 0.2em 0; line-height:1.4em; background:none; border:0;}
+
+#bloqueabajo #columnas div.box-listado ul.logos {margin:0.4em 0.1em 0.2em 0.9em; padding:0.4em 0 0 0; width:100%;}
+#bloqueabajo #columnas div.box-listado ul.logos li {float: left; width:8em; height: 4em; margin:0.1em 0em 0.1em 0; padding:0.1em 0 0 0; background:none; border:0;}
+#bloqueabajo #columnas div.box-listado ul.logos li img {width:80px; margin: 0; padding: 0;}
+#bloqueabajo #columnas div.box-listado ul.logos li a {margin:0; padding:0;}
+
+#bloqueabajo #columnas div.box-listado ul.logostexto {margin:0.2em 0em 0.2em 0em; padding:0.2em 0 0 0; width:100%;}
+#bloqueabajo #columnas div.box-listado ul.logostexto li {width: auto; margin: 0.1em 0 0.9em 0; padding: 0; background: none; border: none}
+#bloqueabajo #columnas div.box-listado ul.logostexto li a img {max-width: 150px; margin: 0.3em 0 0.1em 0; padding: 0;}
+#bloqueabajo #columnas div.box-listado ul.logostexto li a {text-align: center; margin: 0 0 0 0.3em; padding: 0; width: 18em;}
+#bloqueabajo #columnas div.box-listado ul.logostexto li a span {display: block; margin: 0; padding: 0}
+#bloqueabajo #columnas div.box-listado ul.logostexto li.sinborde {border-bottom:0px;}
+
+#bloqueabajo #columnas div.box-listado p {margin: 0.6em; font-size: 0.7em; text-align: justify; line-height: 1.4em}
+#bloqueabajo #columnas div.box-listado p.mail {text-align: center;}
+#bloqueabajo #columnas div.box-listado p.mail a {color: #2F2F2F; font-weight: bold;  background:transparent url("../img/email.png") right no-repeat; padding-right: 2.6em}
+#bloqueabajo #columnas div.box-listado a.ver {float: right; font-size: 0.75em; background: transparent url('../img/ico-arrow-menu.png') left no-repeat; padding: 0 0.4em 0 1.4em; color:#1D518B;}
+#bloqueabajo #columnas div.box-listado a.vertodos {float: right; font-size: 0.75em; background: #1C5493; padding: 0.2em 0.6em 0.2em 0.6em; margin: 0.6em 0.6em 0 0; color:#fff;}
+
+/* especificaciones de box-listado */
+#bloqueabajo #columnas div.azul ul li {background: transparent url("../img/ul-destacadospeq.png") 0 4px no-repeat;}
+#bloqueabajo #columnas div.sin-borde ul li {border: none; border-bottom: 1px solid transparent; }
+#bloqueabajo #columnas div.novedades {background: #fff url("../img/fondo-novedades.png") no-repeat bottom right;}
+#bloqueabajo #columnas div.destacados {background: #fff url("../img/fondo-destacados.png") no-repeat bottom right;}
+#bloqueabajo #columnas div.mapas {background: #fff url("../img/fondo-mapa.png") no-repeat bottom right;}
+#bloqueabajo #columnas div.sedes {background: #fff url("../img/fondo-sedes.png") no-repeat bottom right;}
+
+/* Portales de interes */ 
+#portales-interes {display:block; clear: both; background: #cad4da; width: 59em; min-height:4em; height: auto !important; height:4em; margin: 0em auto; border-top: 1px solid #236FBD; padding: 0.5em }
+#portales-interes h2 {font-size: 0.85em; margin: 0em 0.2em; color: #000}
+	#portales-interes ul {margin: 0.2em auto 0 auto; padding: 0; text-align: center}
+	#portales-interes ul li {display: inline; list-style-image: none; list-style-type: none; margin: 0em; padding: 0em; text-align: center;}
+	#portales-interes ul li img {width: 3.750em; height: 3.125em; vertical-align: middle; margin: 0.2em 0; padding: 0.25em 0.5em 0.3em 0.75em; background: url('../img/fon-enlaces.gif'); border: 0px}
+
+/* Organismos dependientes */ 
+#organismos-dependientes {display:block; clear: both; background: #9ab1c4; width: 59em; min-height:4em; height: auto !important; height:4em; margin: 0.4em auto; border: 1px solid #cdd6db; padding: 0.5em }
+#organismos-dependientes h2 {font-size: 0.85em; margin: 0em 0.2em}
+	#organismos-dependientes ul {margin: 0.2em auto 0 auto; padding: 0; text-align: center}
+	#organismos-dependientes ul li {display: inline; list-style-image: none; list-style-type: none; margin: 0em; padding: 0em; text-align: center;}
+	#organismos-dependientes ul li img {width: 3.750em; height: 3.125em; vertical-align: middle; margin: 0.2em 0; padding: 0.25em 0.5em 0.3em 0.75em; background: url('../img/fon-enlaces.gif'); border: 0px}
+
+/* Enlaces de interes */ 
+#enlaces-institucionales {display:block; clear: both; background: #8AACCA; width: 59em; min-height:4em; height: auto !important; height:4em; margin: 0.4em auto; border: 1px solid #cdd6db; padding: 0.5em }
+#enlaces-institucionales h2 {font-size: 0.85em; margin: 0em 0.2em}
+	#enlaces-institucionales ul {margin: 0.2em auto 0 auto; padding: 0; text-align: center}
+	#enlaces-institucionales ul li {display: inline; list-style-image: none; list-style-type: none; margin: 0em; padding: 0em; text-align: center;}
+	#enlaces-institucionales ul li img {width: 3.750em; height: 3.125em; vertical-align: middle; margin: 0.2em 0; padding: 0.25em 0.5em 0.3em 0.75em; background: url('../img/fon-enlaces.gif'); border: 0px}
+
+/* Lista pie */
+#footer {clear: both; width: 60em; min-height:6.5em; height: auto !important; height:6.5em; background:#1C5493; margin: 0 auto; padding-bottom: 0.8em}
+#footer .columna {width: 14.8em; float: left; margin: 0; padding: 0}
+#footer .columna h3 {font-size: 1em; margin: 0.9em 0.2em 0.1em 1em; color: #fff; background: transparent}
+#footer .columna h3 a {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #fff; text-decoration: none; background: transparent}
+#footer .columna h3 a:hover {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #fff; text-decoration: underline; background: transparent}
+#footer .columna h4 {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #fff; background: transparent}
+#footer .columna h4 a {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #fff; text-decoration: none; background: transparent}
+#footer .columna h4 a:hover {font-size: 1em; margin: 0.9em 0.2em 0.1em 0.4em; color: #fff; text-decoration: underline; background: transparent}
+#footer .columna ul.none {margin: 0.2em 0.2em 0.2em 1em; padding: 0.2em 0.2em 0.2em 2em; border-left: 0px solid #597C8E}
+#footer .columna ul {margin: 0.2em 0.2em 0.2em 0.8em; padding: 0.2em 0em 0.2em 1.6em; border-left: 1px solid #597C8E;}
+#footer .columna ul li {list-style-image: url('../img/arrow-menu.png'); font-size: 0.75em; margin: 0.4em 0; text-align: left}
+	#footer .columna ul ul  {margin: 0.2em 0.2em 0.2em 1.2em; padding: 0.2em 0em 0.2em 1.2em; }
+	#footer .columna ul ul li {list-style-image: url('../img/arrow-menu-2.png'); font-size: 100%; margin: 0.4em 0; padding: 0;  text-align: left}
+	#footer .columna ul li a {color: #fff; text-decoration: none; font-weight: normal; background: transparent}
+	#footer .columna ul li a:hover {color: #fff; text-decoration: underline; background: transparent}
+
+/* Contenido pie de pagina */
+#pie {clear: both; width:100%; margin: 0em auto 0em auto; padding: 1em 0 2em 0; text-align: center; background:#ECF0F2 url("../img/fondo-pie.png") repeat-y top center;}
+#pie #accessible {clear: both; width: 60em; margin: 0em auto 0em auto; padding-top: 1em; text-align: center;}
+#pie #accessible p {font-size: 0.75em; color:#000; margin:0; padding:0.3em 0; display:inline-block; width:100%;}
+#pie #accessible p a {text-decoration:none; border:0; color:black;}
+#pie #accessible p a img {width:auto; margin:0; padding:0.1em;}
+
+#pie #accessible ul.w3c {font-size:75%; margin:0.4em 0 0.2em 0; padding: 0; text-align:center; width:auto; display:inline-block;}
+#pie #accessible ul.w3c li {padding:0.3em; list-style-type:none; display:inline; border:0; margin:0.4em; width:auto;}
+
+#pie #accessible ul {font-size:70%; margin:0.4em 0 1em 0; padding:0; text-align:center; width:auto;}
+#pie #accessible ul li {padding:0 0.9em 0 0.9em; list-style-type:none; display:inline; border-right: 1px solid #000;}
+#pie #accessible ul li.ultimo {border-right:none;}
+#pie #accessible ul li a {color:black; text-decoration:none;}
+#pie #accessible ul li a:hover {text-decoration: underline;}
+
+/* Carrusel de iconos*/
+.carousel {padding: 0px 0 0 0; margin: 0 0 0px 10px; position: relative;}
+.carousel button {/*Don't remove this. we still use this for individual demos. only the front pages use images as of now*/float: left;}    
+.carousel a.prev, .carousel a.next {display: block;	float: left; width: 30px; height: 50px; text-decoration: none; background: url("../img/anterior.png") left 20px no-repeat; padding:0 0.2em}
+.carousel a.next {background: url("../img/siguiente.png") right 20px no-repeat;}
+.carousel a.next:hover {background-image: url("../img/siguientehover.png");}
+.carousel a.prev:hover {background-image: url("../img/anteriorhover.png");}    
+.carousel a:hover, .carousel a:active {border: none; outline: none;}                 
+.carousel .jCarouselLite {float: left;/* Needed for rendering without flicker *//*position: relative;visibility: hidden;left: -5000px;*/}
+.carousel .jCarouselLite ul {margin: 0; padding: 0;}
+
+/*Para el segundo carrusel*/
+.carouselb {padding: 0px 0 0 0; margin: 0 0 0px 5px; position: relative;}
+.carouselb button {/*Don't remove this. we still use this for individual demos. only the front pages use images as of now*/float: left;}    
+.carouselb a.prev, .carouselb a.next {display: block; float: left; width: 30px; height: 50px; text-decoration: none; background: url("../img/anterior.png") left 20px no-repeat; padding:0 0.2em}
+.carouselb a.next {background: url("../img/siguiente.png") right 20px no-repeat;}
+.carouselb a.next:hover {background-image: url("../img/siguientehover.png");}
+.carouselb a.prev:hover {background-image: url("../img/anteriorhover.png");}    
+.carouselb a:hover, .carouselb a:active {border: none; outline: none;}                 
+.carouselb .jCarouselLiteb {float: left;/* Needed for rendering without flicker *//*position: relative;visibility: hidden;left: -5000px;*/}
+.carouselb .jCarouselLiteb ul {margin: 0; padding: 0;}
+
+.main,.mainb {margin-left: 58px;}
+.main3,.mainb3 {margin-left: 315px;}
+.main4,.mainb4 {margin-left: 275px;}
+.main5,.mainb5 {margin-left: 237px;}
+.main6,.mainb6 {margin-left: 196px;}
+.main7,.mainb7 {margin-left: 155px;}
+.main8,.mainb8 {margin-left: 114px;}
+.main9,.mainb9 {margin-left: 73px;}
+
+
+/* CAJAS DE PORTALES */
+#bloqueabajo #columnas #colprimera .portales {width: 13em; border: 1px solid; border-top: 8px solid; margin: 0 0 0.4em 0; padding: 0;}
+#bloqueabajo #columnas #colprimera .portales h2 {margin: 0; padding: 0.4em; font-weight: bold; font-size: 1em;line-height: 1.2em;}
+/*#bloqueabajo #columnas #colprimera .portales ul {margin: 0; padding: 0; padding-left: 12%; width: 88%;}*/
+#bloqueabajo #columnas #colprimera .portales ul {margin: 0; padding: 0 0.25em;}
+/*#bloqueabajo #columnas #colprimera .portales ul li {background: #fff; list-style-type: none;  display: inline-block; width: 4.1em; text-align: center;margin-right: 14%;}*/
+#bloqueabajo #columnas #colprimera .portales ul li {background: #fff; list-style-type: none;  display: inline-block; width: 5.625em; height: 3.75em;text-align: center;margin: 0 0.3125em;}
+/**+html #bloqueabajo #columnas #colprimera .portales ul li {display: inline; margin-right: 13.9%}*/
+*+html #bloqueabajo #columnas #colprimera .portales ul li {display: inline;}
+/*#bloqueabajo #columnas #colprimera .portales ul li a {background: transparent; text-decoration: none; display: inline-block; width: 3.75em; height: 3.1em;*/ /* border: 1px solid #c8c8c8; */ /*padding: 0.14em;}*/
+#bloqueabajo #columnas #colprimera .portales ul li a {background: transparent; text-decoration: none; display: inline-block; width: 5.625em; height: 3.75em;/* border: 1px solid #c8c8c8; *//* padding: 0.14em; */}
+/*#bloqueabajo #columnas #colprimera .portales ul li a img {width: 3.75em; height: 3.1em;}*/
+#bloqueabajo #columnas #colprimera .portales ul li a img {width: 5.625em; height: 3.75em;}
+#bloqueabajo #columnas #colprimera .portales .mas {margin: 0.8em 0; font-size: 0.75em; text-align: right;}
+#bloqueabajo #columnas #colprimera .portales .mas a {color: #fff; padding: 0.2em 0.2em 0.2em 3.2em; text-decoration: none; border-left: 8px solid;}
+#bloqueabajo #columnas #colprimera .portales .mas a:hover {text-decoration: underline; color: #fff;}
+	/* EDUCACIÓN */
+	#bloqueabajo #columnas #colprimera .portales.educacion {
+		border-color: #1D7474;
+		text-align: center;
+		padding: 5px 0 10px 0;		
+	}
+
+	.educacion span {
+		font-size: 0.9em;
+		color: grey;
+	}
+
+	.educacion input[type="text"], .educacion input[type="password"]  {
+		height: 1.35em;
+		padding: 2px 5px;
+	}
+
+	#bloqueabajo #columnas #colprimera .portales.educacion h2 {color: #1D7474;}
+	#bloqueabajo #columnas #colprimera .portales.educacion .mas a {background: #1d7474; border-color: #219c9e;}
+	/* CULTURA */
+	#bloqueabajo #columnas #colprimera .portales.cultura {border-color: #90244d;}
+	#bloqueabajo #columnas #colprimera .portales.cultura h2 {color: #90244d;}
+	#bloqueabajo #columnas #colprimera .portales.cultura .mas a {background: #90244d; border-color: #de2a70;}
+	/* DEPORTE */
+	#bloqueabajo #columnas #colprimera .portales.deporte {border-color: #9b6c00;}
+	#bloqueabajo #columnas #colprimera .portales.deporte h2 {color: #9b6c00;}
+	#bloqueabajo #columnas #colprimera .portales.deporte .mas a {background: #9b6c00; border-color: #fcb200;}
+
+/*Galeria accesible*/
+#container #slides .slides_container .slide .caption p.titulo {font-size: 0.9em; font-weight: bold; margin: 0.2em 0.4em 0.6em 0.5em; text-align: left; display: block;}
+#container #slides .slides_container .slide .caption p.mas a span.ns {position: absolute;left: -999px;width: 1px;height: 1px;top: auto;}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6x 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

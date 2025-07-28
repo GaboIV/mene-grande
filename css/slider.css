@@ -1,0 +1,30 @@
+#container {width:45.875em; height: 22em; padding:0px; margin:0 auto; position: relative;}
+#slides {background: #F0F0F0;}
+/*	Slides container Important: Set the width of your slides container Set to display none, prevents content flash*/
+.slides_container {width:45.875em; height: 22em; overflow:auto; overflow-x: hidden; position: relative; background: #363636; }
+
+/*	Each slide Important: Set the width of your slides. If height not specified height will be set by the slide content. Set to display block*/
+.slides_container div.slide {width:45.875em; height: 22em; display: inline-block/*display: block; height:352px; position: absolute; top: 0*/}
+.slides_container div.slide img {width:45.875em; height: 22em; display: inline-block;}
+
+/*	Next/prev buttons*/
+#slides .next,#slides .prev {/*position:absolute;	top:127px; left:0px;  display:block; z-index:101;*/  position:absolute; top:127px; left:0px; display:block; z-index:101; width:42px; height:36px; opacity: 0.8; z-index:5; }
+#slides .next {left:43.500em; }
+#slides .next:hover,#slides .prev:hover {opacity: 0.9}
+
+/* Pagination*/
+.pagination {margin:0; width:260px; position: absolute; bottom: 1.5em; left: 0em; z-index:502;}
+*+html .pagination {margin:0; width:260px; position: absolute; bottom: 1.5em; left: 2.5em; z-index:502;}
+.pagination li {float:left;	margin:0 1px; list-style:none;}
+.pagination li a {display:block; width:12px; height:0; padding-top:12px; margin-right: 0.5em; background-image:url("../img/pagination.png"); background-position:0 0; float:left; overflow:hidden; }
+.pagination li.current a {background-position:0 -12px;}
+
+ul.pagination {z-index:9;}
+
+/* Caption */
+.caption {display: inline-block; z-index:500; left:0.6em; height:2em; background: transparent url("../img/caption.png"); /*opacity: 0.9;*/ width: 710px; color:#fff;}
+.caption a {text-decoration: none; color: #fff;}
+.caption a.titulo {font-size: 0.9em; font-weight: bold; margin: 0.2em 0.4em 0.6em 0.7em;text-align: left; display: block;}
+.caption p {color: #fff; font-size: 0.75em; margin: 0.2em 0.4em 0.6em 0.7em; text-align: left}
+.caption p.mas a {float: right; position: absolute; bottom: 0.8em; right: 1.4em; width: auto; margin: 0.9em 0em 0 0; padding-left: 1.6em; font-weight: bold; background: url("../img/mas.png") left 55% no-repeat;}
+.caption p.mas a:hover {text-decoration: underline;}

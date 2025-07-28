@@ -1,0 +1,141 @@
+
+
+.modalmask {
+    font-family: 'Roboto Condensed', sans-serif;
+    position: fixed;    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 500ms ease-in;
+    -moz-transition: opacity 500ms ease-in;
+    transition: opacity 500ms ease-in;
+    pointer-events: none;
+}
+
+.modalmask:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalbox{
+    width: 400px;
+    position: relative;
+    padding: 0px 0px 15px 0px;
+    background: #fff;
+    min-height: 125px;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+     
+}
+
+.movedown {
+    margin: 0 auto;
+}
+
+.rotate {
+    margin: 10% auto;
+    -webkit-transform: scale(-5,-5);
+    transform: scale(-5,-5);
+}
+
+.resize {
+    margin: 10% auto;
+    width:0;
+    height:0;
+ 
+}
+
+.modalmask:target .movedown{       
+    margin:10% auto;
+}
+
+.modalmask:target .rotate{     
+    transform: rotate(360deg) scale(1,1);
+        -webkit-transform: rotate(360deg) scale(1,1);
+}
+ 
+.modalmask:target .resize{
+    width:400px;
+    height:200px;
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:3px;
+ 
+}
+ 
+.close:hover {
+    background: #FAAC58;
+    color:#222; 
+}
+
+.boton-gestion{width: 40px; padding: 3px; display: inline-block;}
+
+a.boton-gestion {
+    cursor: pointer;    
+    font-size: 13px;
+    color: white;
+    text-decoration: none !important;
+    vertical-align: center;
+    text-align: center;    
+    margin-bottom: 2px;
+    box-shadow:black 1px 1px 1px;
+    background-color: #FF7423; 
+    margin-right: 5px;   
+    }
+
+a.boton-gestion:hover {
+  background-color: #FF7C28;
+}
+
+.cerrar { 
+    background: grey;
+    min-height: 29px;
+    box-sizing: border-box;
+    padding-top: 4px;
+    border-radius:3px 3px 0px 0px;
+}
+
+.cuerpo_aviso {
+    font-size: 14px;    
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.in_registro {
+    width: 60%;
+    border: solid #C0C0C0 1px;
+    height: 24px;
+    font-size: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.in_textos {
+    width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.in_span {
+    display: inline-block;
+    width: 30%;
+}
