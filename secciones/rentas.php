@@ -19,12 +19,15 @@
 <body>
     <?php 
 
-    include("../conexion.php");
+    include("../conexion_final.php");
 
     $consulta_con = "SELECT * FROM renta ORDER BY id_renta DESC LIMIT 0,4";
     $ejecutar_consulta_con = $conexion->query($consulta_con);
 
-    while ($registro_con = $ejecutar_consulta_con->fetch_array()){
+    if ($ejecutar_consulta_con === false) {
+        echo "<div class='cadacontact'><span><b>Error de conexión a la base de datos</b></span></div>";
+    } else {
+        while ($registro_con = $ejecutar_consulta_con->fetch_array()){
 
     $concepto_cond = $registro_con["concepto"]; 
     $monto_cond = number_format(abs($registro_con["monto"]), 2, ',', '.');
@@ -46,6 +49,7 @@
     if ($mes_en=="December") $mes_es="Diciembre"; 
 
         echo "<div class='cadacontact'><span><b>$concepto_cond</b></span><br><span>$mes_es-$ano_ac</span><br><span>Bs.F.: <b>$monto_cond</b></span></div>";
+        }
     }
 
 

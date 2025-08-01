@@ -1,44 +1,74 @@
-<!DOCTYPE html>
 <?php 
+    session_start();
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
     include("conexion_final.php");
     include("auth_helper.php");
-    include("switch.php"); 
+    include("switch.php");
+?>
 
-    // Verificar autenticación
+
+
+
+    <!-- Verificar autenticación -->
+    <?php	
     if (!AuthHelper::isAuthenticated()) {
         header("Location: index.php?error=noauth");
         exit;
     }
+    ?>
 
+    <!-- Obtener información del usuario -->
+    <?php
     $id_sesion = AuthHelper::getCurrentInmuebleId();
     $usuario_actual = AuthHelper::getCurrentUser();
+    ?>  
 
+    <!-- Consultar datos del inmueble -->
+    <?php
     $consulta = "SELECT * FROM inmueble WHERE id_inmueble=$id_sesion";
     $ejecutar_consulta = $conexion->query($consulta);
-    
+    ?>
+
+    <!-- Verificar si se encontraron datos -->
+    <?php
     if ($ejecutar_consulta === false) {
         die("Error en la consulta: " . $conexion->error);
     }
-    
+    ?>
+
+    <!-- Obtener los datos del inmueble -->
+    <?php
     $registro_inm = $ejecutar_consulta->fetch_assoc();
     
     if (!$registro_inm) {
         die("No se encontraron datos para el id_inmueble: $id_sesion");
     }
+    ?> 
 
+
+    <!-- Obtener el nombre del inmueble -->
+    <?php
     $casa = $registro_inm["inmueble"];
 
     $nombre_completo = $usuario_actual;
     $name = explode(" ", $nombre_completo);
+    ?>
 
+    <!-- Consultar datos de la renta -->
+    <?php
     $consulta = "SELECT * FROM renta ORDER BY id_renta DESC LIMIT 1";
     $ejecutar_consulta = $conexion->query($consulta);
-    
+    ?>
+
+    <!-- Verificar si la consulta de renta falló -->
+    <?php
     if ($ejecutar_consulta === false) {
         die("Error en la consulta de renta: " . $conexion->error);
     }
-    
+    ?>
+
+    <!-- Obtener los datos de la renta -->
+    <?php
     $registro_inm = $ejecutar_consulta->fetch_assoc(); 
     
     if (!$registro_inm) {
@@ -48,22 +78,17 @@
         $ano_ac = date("Y");
     } else { 
 
-    $monto_cond = number_format(abs($registro_inm["monto"]), 2, ',', '.');
+        $monto_cond = number_format(abs($registro_inm["monto"]), 2, ',', '.');
 
-    $mes_ac = $registro_inm["mes"];
+        $mes_ac = $registro_inm["mes"];
 
-    $ano_ac = $registro_inm["ano"];
+        $ano_ac = $registro_inm["ano"];
     }
-    
-    $mes_en = date("F", mktime(0,0,0,$mes_ac,1,$ano_ac));               
+    ?>
 
-    /*if ($dia_en=="Monday") $dia_es="Lunes";
-    if ($dia_en=="Tuesday") $dia_es="Martes";
-    if ($dia_en=="Wednesday") $dia_es="Miércoles";
-    if ($dia_en=="Thursday") $dia_es="Jueves";
-    if ($dia_en=="Friday") $dia_es="Viernes";
-    if ($dia_en=="Saturday") $dia_es="Sabado";
-    if ($dia_en=="Sunday") $dia_es="Domingo";*/        
+    <!-- Obtener el mes en español -->
+    <?php
+    $mes_en = date("F", mktime(0,0,0,$mes_ac,1,$ano_ac));               
 
     if ($mes_en=="January") $mes_es="Enero";
     if ($mes_en=="February") $mes_es="Febrero";
@@ -77,7 +102,18 @@
     if ($mes_en=="October") $mes_es="Octubre";
     if ($mes_en=="November") $mes_es="Noviembre";
     if ($mes_en=="December") $mes_es="Diciembre";
-?>
+    ?>
+
+    <!-- Obtener el dia en español -->
+    <?php
+    if ($dia_en=="Monday") $dia_es="Lunes";
+    if ($dia_en=="Tuesday") $dia_es="Martes";
+    if ($dia_en=="Wednesday") $dia_es="Miércoles";
+    if ($dia_en=="Thursday") $dia_es="Jueves";
+    if ($dia_en=="Friday") $dia_es="Viernes";
+    if ($dia_en=="Saturday") $dia_es="Sabado";
+    if ($dia_en=="Sunday") $dia_es="Domingo";
+    ?>
 
 <style type="text/css">
 
@@ -354,11 +390,35 @@
             </div>
         </section>
 
-            <?php include($_SESSION['menu_es']); ?> 
+            <?php 
+            // Verificar que el menú esté definido antes de incluirlo
+            if (isset($_SESSION['menu_es']) && !empty($_SESSION['menu_es']) && file_exists($_SESSION['menu_es'])) {
+                include($_SESSION['menu_es']); 
+            } else {
+                // Fallback al menú por defecto
+                if (AuthHelper::isAdmin()) {
+                    include("menu_administrador.php");
+                } else {
+                    include("menu_propietario.php");
+                }
+            }
+            ?> 
 
         <section id="main-body" class="container">
            
-            <?php include($contenido); ?>           
+            <?php 
+            // Verificar que el contenido esté definido antes de incluirlo
+            if (isset($contenido) && !empty($contenido) && file_exists($contenido)) {
+                include($contenido); 
+            } else {
+                // Fallback al contenido por defecto
+                if (AuthHelper::isAdmin()) {
+                    include("secciones/main_administracion.php");
+                } else {
+                    include("secciones/main_propietario.php");
+                }
+            }
+            ?>           
 
             <div class="clearfix"></div>
 

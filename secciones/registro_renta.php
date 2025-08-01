@@ -16,7 +16,7 @@
 
 <?php 
 
-    include("../conexion.php");
+    include("../conexion_final.php");
 
 ?>
 

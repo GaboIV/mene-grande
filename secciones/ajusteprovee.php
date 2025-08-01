@@ -36,7 +36,7 @@
 	error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
     session_start();
 
-	include("../conexion.php");
+	include("../conexion_final.php");
 
 	$valur = $_GET["valur"];
 	$atributo = $_GET["attr"];
